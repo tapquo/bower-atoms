@@ -1,0 +1,13 @@
+{
+  "name": "atoms",
+  "description": "Atomic Development Components for Modern WebApps.",
+  "version": "0.0.1",
+  "homepage": "http://atoms.tapquo.com",
+  "author": {
+    "name": "Tapquo S.L.",
+    "site": "http://tapquo.com"},
+  "main": ["./atoms.js"],
+  "keywords": [ "mobile", "framework", "html5", "device", "desktop", "phone", "tablet", "tv" ],
+  "dependencies": {"quojs": "latest"},
+  "license": [ {"type": "GPLv3"} ]
+}
