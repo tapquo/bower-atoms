@@ -1,3 +1,6 @@
+button {
+  cursor: pointer;
+}
 [data-atoms="app"] section button {
   -webkit-border-radius: 0.2rem;
   -moz-border-radius: 0.2rem;
@@ -273,6 +276,27 @@
 [data-atoms="app"] label.select:-ms-input-placeholder {
   color: #cecece;
 }
+[data-atoms="app"] input[type=range] {
+  background-color: #cecece;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  -ms-border-radius: 0.1rem;
+  -o-border-radius: 0.1rem;
+  border-radius: 0.1rem;
+}
+[data-atoms="app"] input[type=range]:hover,
+[data-atoms="app"] input[type=range]:active {
+  background-color: #6441a5 !important;
+}
+[data-atoms="app"] input[type=range]::-webkit-slider-thumb {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #fdfdfd;
+  border: 1px solid #cecece;
+}
 
 [data-atoms="app"] fieldset label,
 [data-atoms="app"] form label {
@@ -328,12 +352,20 @@
   color: #fff !important;
 }
 [data-atoms="app"] footer nav button {
-  color: #979797;
+  color: #787878;
+  -webkit-text-shadow: 0 0.1rem #292929;
+  -moz-text-shadow: 0 0.1rem #292929;
+  -ms-text-shadow: 0 0.1rem #292929;
+  -o-text-shadow: 0 0.1rem #292929;
+  text-shadow: 0 0.1rem #292929;
 }
 [data-atoms="app"] footer nav button:active,
 [data-atoms="app"] footer nav button:hover,
 [data-atoms="app"] footer nav button.active {
   color: #fff;
+}
+[data-atoms="app"] footer nav button.active {
+  background-color: #232323;
 }
 
 [data-atoms="app"] > article {

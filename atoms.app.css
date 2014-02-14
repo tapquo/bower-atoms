@@ -14,7 +14,7 @@ th,td,caption{vertical-align:top;text-align:left}
 button{display:inline-block;min-height:1em;vertical-align:middle;font-size:inherit;font-family:inherit;font-weight:inherit;text-align:center;text-decoration:none;line-height:1em;border:none;cursor:pointer;outline:none;background:none;}
 button > .icon{line-height:.9em}
 button > .icon + abbr{margin-left:.25em}
-[data-atoms="app"] header button{height:3.25rem;padding:0 .6em;}
+[data-atoms="app"] header button{height:3.6rem;padding:0 .6em;vertical-align:top;}
 [data-atoms="app"] header button > .icon{font-size:1.5rem}
 [data-atoms="app"] section button{padding:.8em 1em;margin:.2em 0;}
 [data-atoms="app"] section button .icon{font-size:1.1em}
@@ -36,6 +36,9 @@ button > .icon + abbr{margin-left:.25em}
 [data-atoms="app"] input[type="text"].big,[data-atoms="app"] input[type="password"].big,[data-atoms="app"] input[type="date"].big,[data-atoms="app"] input[type="datetime"].big,[data-atoms="app"] input[type="email"].big,[data-atoms="app"] input[type="number"].big,[data-atoms="app"] input[type="search"].big,[data-atoms="app"] input[type="tel"].big,[data-atoms="app"] input[type="time"].big,[data-atoms="app"] input[type="url"].big,[data-atoms="app"] select.big,[data-atoms="app"] textarea.big,[data-atoms="app"] label.select.big{padding:.85rem .75rem;font-size:1.2rem}
 [data-atoms="app"] input[type="text"].small,[data-atoms="app"] input[type="password"].small,[data-atoms="app"] input[type="date"].small,[data-atoms="app"] input[type="datetime"].small,[data-atoms="app"] input[type="email"].small,[data-atoms="app"] input[type="number"].small,[data-atoms="app"] input[type="search"].small,[data-atoms="app"] input[type="tel"].small,[data-atoms="app"] input[type="time"].small,[data-atoms="app"] input[type="url"].small,[data-atoms="app"] select.small,[data-atoms="app"] textarea.small,[data-atoms="app"] label.select.small{padding:.45rem .75rem;font-size:.9rem}
 [data-atoms="app"] input[type="text"].tiny,[data-atoms="app"] input[type="password"].tiny,[data-atoms="app"] input[type="date"].tiny,[data-atoms="app"] input[type="datetime"].tiny,[data-atoms="app"] input[type="email"].tiny,[data-atoms="app"] input[type="number"].tiny,[data-atoms="app"] input[type="search"].tiny,[data-atoms="app"] input[type="tel"].tiny,[data-atoms="app"] input[type="time"].tiny,[data-atoms="app"] input[type="url"].tiny,[data-atoms="app"] select.tiny,[data-atoms="app"] textarea.tiny,[data-atoms="app"] label.select.tiny{padding:.35rem .75rem;font-size:.8rem}
+[data-atoms="app"] textarea{min-height:5em;line-height:1.2rem}
+[data-atoms="app"] input[type="range"]{height:.2rem;width:100%;margin:1.5em 0;padding:0;border:none;-webkit-appearance:none;outline:none;}
+[data-atoms="app"] input[type="range"]::-webkit-slider-thumb{position:relative;width:1.5rem;height:1.5rem;-webkit-appearance:none;border:none}
 
 [data-atoms="app"] label{display:inline-block;font-size:.85rem;font-weight:normal;min-width:1rem;min-height:1rem;}
 [data-atoms="app"] label.tag + label.tag:not(:last-child){margin-left:.2rem}
@@ -52,12 +55,12 @@ button > .icon + abbr{margin-left:.25em}
 [data-atoms="app"] header a{padding:0 .5em;vertical-align:middle}
 
 [data-atoms="app"] > article section nav,[data-atoms="app"] > article footer nav{width:100%;display:-webkit-box;display:-moz-box;display:-o-box;display:box;display:-ms-flexbox;-webkit-box-pack:justify;-moz-box-pack:justify;-o-box-pack:justify;box-pack:justify;-ms-flex-pack:justify;}
-[data-atoms="app"] > article section nav > button,[data-atoms="app"] > article footer nav > button{-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;box-flex:1;-ms-flex:1 0 auto;display:block;padding:0;text-align:center;width:1px;margin:0}
-[data-atoms="app"] header nav{height:3.25rem;min-width:3.25rem}
-[data-atoms="app"] section nav > button{height:3.25rem}
-[data-atoms="app"] > article footer nav{height:3.75rem;}
-[data-atoms="app"] > article footer nav > button{height:3.75rem;font-size:2.25rem}
-[data-atoms="app"] aside section nav > a{display:block;line-height:3.25rem;}
+[data-atoms="app"] > article section nav > button,[data-atoms="app"] > article footer nav > button{-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;box-flex:1;-ms-flex:1 0 auto;display:block;margin:0;padding:0;width:1px;text-align:center}
+[data-atoms="app"] header nav{height:3.6rem;min-width:2.7rem}
+[data-atoms="app"] section nav,[data-atoms="app"] section nav > button{height:3.6rem}
+[data-atoms="app"] > article footer nav{height:3.35rem;}
+[data-atoms="app"] > article footer nav > button{height:3.35rem;font-size:1.5rem}
+[data-atoms="app"] aside section nav > a{display:block;line-height:3.6rem;}
 [data-atoms="app"] aside section nav > a .icon{font-size:1.2rem;margin-right:.25rem}
 
 
@@ -72,9 +75,9 @@ button > .icon + abbr{margin-left:.25em}
 [data-atoms="app"] > aside:not(.active){z-index:-1;visibility:hidden}
 [data-atoms="app"] > aside.active{z-index:0;visibility:visible}
 
-[data-atoms="app"] > article footer,[data-atoms="app"] > aside footer{height:3.75rem;line-height:3.75rem}
+[data-atoms="app"] > article footer,[data-atoms="app"] > aside footer{height:3.35rem;line-height:3.35rem}
 
-[data-atoms="app"] > article header,[data-atoms="app"] > aside header{height:3.25rem;line-height:3.25rem;}
+[data-atoms="app"] > article header,[data-atoms="app"] > aside header{height:3.6rem;line-height:3.6rem;}
 [data-atoms="app"] > article header h1,[data-atoms="app"] > aside header h1{z-index:0;position:absolute;left:25%;width:50%;text-align:center}
 
 [data-atoms="app"] [data-component="modal"]{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1980;display:-webkit-box;display:-moz-box;display:-o-box;display:box;display:-ms-flexbox;-webkit-box-align:center;-moz-box-align:center;-ms-box-align:center;-o-box-align:center;box-align:center;-ms-flex-align:center;-webkit-box-pack:center;-moz-box-pack:center;-o-box-pack:center;box-pack:center;-ms-flex-pack:center;}
@@ -90,6 +93,7 @@ button > .icon + abbr{margin-left:.25em}
 [data-atoms="app"] [data-component="modal"].loading > article::after{float:right;margin-left:.375rem}
 
 [data-atoms="app"] article section,[data-atoms="app"] aside section{overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;-webkit-box-flex:1;}
+[data-atoms="app"] article section.padding,[data-atoms="app"] aside section.padding{padding:.75rem 1rem}
 [data-atoms="app"] article section > *,[data-atoms="app"] aside section > *{-webkit-transform:translate3d(0,0,0)}
 [data-atoms="app"] aside section{padding:.5rem 1rem;width:100%}
 
