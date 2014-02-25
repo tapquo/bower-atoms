@@ -356,27 +356,27 @@ button {
   color: #fff;
 }
 
-[data-atoms="app"] > article header nav button {
+[data-atoms="app"] article header nav button {
   color: #d7cdeb;
 }
-[data-atoms="app"] > aside section nav a {
+[data-atoms="app"] aside section nav a {
   font-weight: normal;
 }
-[data-atoms="app"] > aside section nav a:not(.active) {
+[data-atoms="app"] aside section nav a:not(.active) {
   color: #6441a5;
 }
-[data-atoms="app"] > aside section nav a.active {
+[data-atoms="app"] aside section nav a.active {
   color: #fff;
 }
-[data-atoms="app"] > aside header nav button {
+[data-atoms="app"] aside header nav button {
   color: #cbcbcb;
 }
-[data-atoms="app"] > article header nav button:hover,
-[data-atoms="app"] > article header nav button:active,
-[data-atoms="app"] > article header nav button.active {
+[data-atoms="app"] header nav button:hover,
+[data-atoms="app"] header nav button:active,
+[data-atoms="app"] header nav button.active {
   color: #fff !important;
 }
-[data-atoms="app"] > article footer nav button {
+[data-atoms="app"] footer nav button {
   color: #787878;
   -webkit-text-shadow: 0 0.1rem #292929;
   -moz-text-shadow: 0 0.1rem #292929;
@@ -384,12 +384,12 @@ button {
   -o-text-shadow: 0 0.1rem #292929;
   text-shadow: 0 0.1rem #292929;
 }
-[data-atoms="app"] > article footer nav button:active,
-[data-atoms="app"] > article footer nav button:hover,
-[data-atoms="app"] > article footer nav button.active {
+[data-atoms="app"] footer nav button:active,
+[data-atoms="app"] footer nav button:hover,
+[data-atoms="app"] footer nav button.active {
   color: #fff;
 }
-[data-atoms="app"] > article footer nav button.active {
+[data-atoms="app"] footer nav button.active {
   background-color: #232323;
 }
 
@@ -914,7 +914,6 @@ button {
   }
 }
 
-
 [data-atoms="app"] > article header h1,
 [data-atoms="app"] > aside header h1 {
   color: #fff;
@@ -922,14 +921,29 @@ button {
   font-weight: 300 !important;
 }
 
-[data-system=modal] {
+[data-atoms="app"] [data-component="modal"] {
   visibility: hidden;
 }
-[data-system=modal].active {
-  visibility: visible;
-  background-color: rgba(0,0,0,0.5);
+[data-atoms="app"] [data-component="modal"]:not(.loading) > article {
+  background: #f4f4f4;
 }
-[data-system=modal].active > [data-organism] {
+[data-atoms="app"] [data-component="modal"]:not(.loading) > article > header {
+  color: #626262;
+}
+[data-atoms="app"] [data-component="modal"]:not(.loading) > article > section {
+  color: #929292;
+}
+[data-atoms="app"] [data-component="modal"]:not(.loading) > article > footer {
+  background: #f7f7f7;
+}
+[data-atoms="app"] [data-component="modal"]:not(.loading) > article > footer > nav > button:not(:last-child) {
+  border-bottom: solid 1px #e8e8e8;
+}
+[data-atoms="app"] [data-component="modal"].active {
+  visibility: visible;
+  background-color: rgba(0,0,0,0.25);
+}
+[data-atoms="app"] [data-component="modal"].active > article {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
@@ -946,7 +960,7 @@ button {
   -o-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-[data-system=modal].active > [data-organism].show {
+[data-atoms="app"] [data-component="modal"].active > article.show {
   -webkit-animation-name: modal-show;
   -moz-animation-name: modal-show;
   -ms-animation-name: modal-show;
@@ -958,7 +972,7 @@ button {
   -o-animation-direction: normal;
   animation-direction: normal;
 }
-[data-system=modal].active > [data-organism].hide {
+[data-atoms="app"] [data-component="modal"].active > article.hide {
   -webkit-animation-name: modal-show;
   -moz-animation-name: modal-show;
   -ms-animation-name: modal-show;
@@ -979,22 +993,7 @@ button {
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-[data-system=modal] > :not([data-organism=loading]) {
-  background: #f4f4f4;
-}
-[data-system=modal] > :not([data-organism=loading]) > header {
-  color: #626262;
-}
-[data-system=modal] > :not([data-organism=loading]) > section {
-  color: #929292;
-}
-[data-system=modal] > :not([data-organism=loading]) > footer {
-  background: #f7f7f7;
-}
-[data-system=modal] > :not([data-organism=loading]) > footer > nav > button:not(:last-child) {
-  border-bottom: solid 1px #e8e8e8;
-}
-[data-system=modal] > [data-organism=loading] {
+[data-atoms="app"] [data-component="modal"].loading > article {
   background: #181818;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
@@ -1002,8 +1001,8 @@ button {
   -o-border-radius: 1rem;
   border-radius: 1rem;
 }
-[data-system=modal] > [data-organism=loading]::before,
-[data-system=modal] > [data-organism=loading]::after {
+[data-atoms="app"] [data-component="modal"].loading > article::before,
+[data-atoms="app"] [data-component="modal"].loading > article::after {
   background-color: #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1011,19 +1010,19 @@ button {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-[data-system=modal] > [data-organism=loading].show::before {
-  -webkit-animation: modal-loading 630ms 0 steps(15) infinite;
-  -moz-animation: modal-loading 630ms 0 steps(15) infinite;
-  -ms-animation: modal-loading 630ms 0 steps(15) infinite;
-  -o-animation: modal-loading 630ms 0 steps(15) infinite;
-  animation: modal-loading 630ms 0 steps(15) infinite;
+[data-atoms="app"] [data-component="modal"].loading > article.show::before {
+  -webkit-animation: loading-dots 630ms 0 steps(15) infinite;
+  -moz-animation: loading-dots 630ms 0 steps(15) infinite;
+  -ms-animation: loading-dots 630ms 0 steps(15) infinite;
+  -o-animation: loading-dots 630ms 0 steps(15) infinite;
+  animation: loading-dots 630ms 0 steps(15) infinite;
 }
-[data-system=modal] > [data-organism=loading].show::after {
-  -webkit-animation: modal-loading 630ms 315ms steps(15) infinite;
-  -moz-animation: modal-loading 630ms 315ms steps(15) infinite;
-  -ms-animation: modal-loading 630ms 315ms steps(15) infinite;
-  -o-animation: modal-loading 630ms 315ms steps(15) infinite;
-  animation: modal-loading 630ms 315ms steps(15) infinite;
+[data-atoms="app"] [data-component="modal"].loading > article.show::after {
+  -webkit-animation: loading-dots 630ms 315ms steps(15) infinite;
+  -moz-animation: loading-dots 630ms 315ms steps(15) infinite;
+  -ms-animation: loading-dots 630ms 315ms steps(15) infinite;
+  -o-animation: loading-dots 630ms 315ms steps(15) infinite;
+  animation: loading-dots 630ms 315ms steps(15) infinite;
 }
 @-moz-keyframes modal-show {
   0% {
@@ -1200,7 +1199,7 @@ button {
     transform: translateY(0);
   }
 }
-@-moz-keyframes modal-loading {
+@-moz-keyframes loading-dots {
   0% {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -1228,7 +1227,7 @@ button {
     transform: scale(1);
   }
 }
-@-webkit-keyframes modal-loading {
+@-webkit-keyframes loading-dots {
   0% {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -1256,7 +1255,7 @@ button {
     transform: scale(1);
   }
 }
-@-o-keyframes modal-loading {
+@-o-keyframes loading-dots {
   0% {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -1284,7 +1283,7 @@ button {
     transform: scale(1);
   }
 }
-@-ms-keyframes modal-loading {
+@-ms-keyframes loading-dots {
   0% {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -1312,7 +1311,7 @@ button {
     transform: scale(1);
   }
 }
-@keyframes modal-loading {
+@keyframes loading-dots {
   0% {
     opacity: 1;
     -webkit-transform: scale(1);

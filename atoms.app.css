@@ -49,8 +49,8 @@ button > .icon + abbr{margin-left:.25em}
 [data-atoms="app"] label.tag{padding:.4em .8em;margin:.2rem 0}
 
 [data-atoms="app"] li{list-style-type:none;position:relative;text-align:-webkit-match-parent;line-height:inherit;}
-[data-atoms="app"] li[data-atom=li]{border-bottom:solid 1px #ccc;display:-webkit-box;display:-moz-box;display:-o-box;display:box;display:-ms-flexbox;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-o-box-orient:horizontal;box-orient:horizontal;-ms-flex-direction:row;padding:.75rem;}
-[data-atoms="app"] li[data-atom=li] > figure{width:44px;height:44px;margin-right:.75rem}
+[data-atoms="app"] li[data-atom=li]{border-bottom:solid 1px #ccc;display:-webkit-box;display:-moz-box;display:-o-box;display:box;display:-ms-flexbox;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-o-box-orient:horizontal;box-orient:horizontal;-ms-flex-direction:row;padding:.7em;}
+[data-atoms="app"] li[data-atom=li] > figure{width:44px;height:44px;margin-right:.7em}
 [data-atoms="app"] li[data-atom=li] > div{-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;box-flex:1;-ms-flex:1 0 auto;}
 [data-atoms="app"] li[data-atom=li] > div span{float:right;font-size:.8rem}
 [data-atoms="app"] li[data-atom=li] > div strong,[data-atoms="app"] li[data-atom=li] > div small{display:block;line-height:1.4rem}
@@ -84,21 +84,17 @@ button > .icon + abbr{margin-left:.25em}
 [data-atoms="app"] > article header,[data-atoms="app"] > aside header{height:3.6rem;line-height:3.6rem;}
 [data-atoms="app"] > article header h1,[data-atoms="app"] > aside header h1{z-index:0;position:absolute;left:25%;width:50%;text-align:center}
 
-[data-system=modal]{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1980;display:-webkit-box;display:-moz-box;display:-o-box;display:box;display:-ms-flexbox;-webkit-box-align:center;-moz-box-align:center;-ms-box-align:center;-o-box-align:center;box-align:center;-ms-flex-align:center;-webkit-box-pack:center;-moz-box-pack:center;-o-box-pack:center;box-pack:center;-ms-flex-pack:center;}
-[data-system=modal] > [data-organism]{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
-[data-system=modal] > [data-organism=loading]{padding:.75rem;}
-[data-system=modal] > [data-organism=loading]::before,[data-system=modal] > [data-organism=loading]::after{content:"";display:block;width:1.5rem;height:1.5rem}
-[data-system=modal] > [data-organism=loading]::before{float:left;margin-right:.375rem}
-[data-system=modal] > [data-organism=loading]::after{float:right;margin-left:.375rem}
-[data-system=modal] > :not([data-organism=loading]){width:280px;text-align:center;}
-[data-system=modal] > :not([data-organism=loading]) > header{margin-bottom:.75rem;}
-[data-system=modal] > :not([data-organism=loading]) > header > *{display:block;padding-top:1rem;text-align:center}
-[data-system=modal] > :not([data-organism=loading]) > header .icon{font-size:3.5rem;line-height:3.5rem;}
-[data-system=modal] > :not([data-organism=loading]) > header .icon + h1{padding-top:0}
-[data-system=modal] > :not([data-organism=loading]) > section{padding:.75rem}
-[data-system=modal] > :not([data-organism=loading]) > footer{margin-top:.75rem;}
-[data-system=modal] > :not([data-organism=loading]) > footer > nav{margin:0 .75rem;font-size:1.2rem;}
-[data-system=modal] > :not([data-organism=loading]) > footer > nav > button{line-height:3.3rem;width:100%;display:block}
+[data-atoms="app"] [data-component="modal"]{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1980;display:-webkit-box;display:-moz-box;display:-o-box;display:box;display:-ms-flexbox;-webkit-box-align:center;-moz-box-align:center;-ms-box-align:center;-o-box-align:center;box-align:center;-ms-flex-align:center;-webkit-box-pack:center;-moz-box-pack:center;-o-box-pack:center;box-pack:center;-ms-flex-pack:center;}
+[data-atoms="app"] [data-component="modal"]:not(.loading) > article{width:280px;text-align:center;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);}
+[data-atoms="app"] [data-component="modal"]:not(.loading) > article > header > *{display:block;padding-top:1rem;text-align:center}
+[data-atoms="app"] [data-component="modal"]:not(.loading) > article > header .icon{font-size:3.5rem;line-height:3.5rem;}
+[data-atoms="app"] [data-component="modal"]:not(.loading) > article > header .icon + h1{padding-top:0}
+[data-atoms="app"] [data-component="modal"]:not(.loading) > article > footer > nav{margin:0 1em;font-size:1.2rem;}
+[data-atoms="app"] [data-component="modal"]:not(.loading) > article > footer > nav > button{line-height:3.3rem;width:100%;display:block}
+[data-atoms="app"] [data-component="modal"].loading > article{padding:.75rem;}
+[data-atoms="app"] [data-component="modal"].loading > article::before,[data-atoms="app"] [data-component="modal"].loading > article::after{content:"";display:block;width:1.5rem;height:1.5rem}
+[data-atoms="app"] [data-component="modal"].loading > article::before{float:left;margin-right:.375rem}
+[data-atoms="app"] [data-component="modal"].loading > article::after{float:right;margin-left:.375rem}
 
 [data-atoms="app"] article section,[data-atoms="app"] aside section{overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;-webkit-box-flex:1;}
 [data-atoms="app"] article section.padding,[data-atoms="app"] aside section.padding{padding:.75rem 1rem}
