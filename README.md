@@ -1,6 +1,6 @@
 # Atoms
 ## Atomic Development Components for Modern WebApps
-Copyright 2013, Tapquo S.L.
+Copyright 2013-2014, Tapquo S.L.
 
 
 ### What is Atoms?
