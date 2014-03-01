@@ -422,6 +422,13 @@ button {
   -o-animation-name: article-in;
   animation-name: article-in;
 }
+[data-atoms="app"] > article.active[data-state="in"]:only-of-type {
+  -webkit-animation-duration: 0s;
+  -moz-animation-duration: 0s;
+  -ms-animation-duration: 0s;
+  -o-animation-duration: 0s;
+  animation-duration: 0s;
+}
 [data-atoms="app"] > article.active[data-state="out"] {
   z-index: 2;
   -webkit-animation-name: article-in;
