@@ -356,40 +356,56 @@ button {
   color: #fff;
 }
 
-[data-atoms="app"] > article header nav button {
+[data-atoms="app"] > article > header nav button {
   color: #d7cdeb;
 }
-[data-atoms="app"] > aside section nav a {
+[data-atoms="app"] > aside > section nav a {
   font-weight: normal;
 }
-[data-atoms="app"] > aside section nav a:not(.active) {
+[data-atoms="app"] > aside > section nav a:not(.active) {
   color: #6441a5;
 }
-[data-atoms="app"] > aside section nav a.active {
+[data-atoms="app"] > aside > section nav a.active {
   color: #fff;
 }
-[data-atoms="app"] > aside header nav button {
+[data-atoms="app"] > aside > header nav button {
   color: #cbcbcb;
 }
-[data-atoms="app"] > article header nav button:hover,
-[data-atoms="app"] > article header nav button:active,
-[data-atoms="app"] > article header nav button.active {
+[data-atoms="app"] > article > header nav button:hover,
+[data-atoms="app"] > article > header nav button:active,
+[data-atoms="app"] > article > header nav button.active {
   color: #fff !important;
 }
-[data-atoms="app"] > article footer nav button {
+[data-atoms="app"] > article > footer nav button,
+[data-atoms="app"] > article > nav button {
   color: #787878;
+}
+[data-atoms="app"] > article > footer nav button:active,
+[data-atoms="app"] > article > nav button:active,
+[data-atoms="app"] > article > footer nav button:hover,
+[data-atoms="app"] > article > nav button:hover,
+[data-atoms="app"] > article > footer nav button.active,
+[data-atoms="app"] > article > nav button.active {
+  color: #fff;
+}
+[data-atoms="app"] > article > nav {
+  background-color: #232323;
+}
+[data-atoms="app"] > article > nav > button.active {
+  -webkit-box-shadow: inset 0 -0.25rem #6441a5;
+  -moz-box-shadow: inset 0 -0.25rem #6441a5;
+  -ms-box-shadow: inset 0 -0.25rem #6441a5;
+  -o-box-shadow: inset 0 -0.25rem #6441a5;
+  box-shadow: inset 0 -0.25rem #6441a5;
+}
+[data-atoms="app"] > article > footer nav button {
   -webkit-text-shadow: 0 0.1rem #292929;
   -moz-text-shadow: 0 0.1rem #292929;
   -ms-text-shadow: 0 0.1rem #292929;
   -o-text-shadow: 0 0.1rem #292929;
   text-shadow: 0 0.1rem #292929;
 }
-[data-atoms="app"] > article footer nav button:active,
-[data-atoms="app"] > article footer nav button:hover,
-[data-atoms="app"] > article footer nav button.active {
-  color: #fff;
-}
-[data-atoms="app"] > article footer nav button.active {
+[data-atoms="app"] > article > footer nav button.active {
   background-color: #232323;
 }
 
