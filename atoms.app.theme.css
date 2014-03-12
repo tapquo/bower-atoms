@@ -341,7 +341,7 @@ button {
   border-bottom: solid 1px #dcdcdc;
 }
 [data-atoms="app"] li[data-atom=li] > figure {
-  background: #dcdcdc;
+  background-color: #dcdcdc;
 }
 [data-atoms="app"] li[data-atom=li] strong {
   font-weight: bold;

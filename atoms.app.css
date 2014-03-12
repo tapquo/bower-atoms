@@ -50,7 +50,7 @@ button > .icon + abbr{margin-left:.25em}
 
 [data-atoms="app"] li{list-style-type:none;position:relative;text-align:-webkit-match-parent;line-height:inherit;}
 [data-atoms="app"] li[data-atom=li]{border-bottom:solid 1px #ccc;display:-webkit-box;display:-moz-box;display:-o-box;display:box;display:-ms-flexbox;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-o-box-orient:horizontal;box-orient:horizontal;-ms-flex-direction:row;padding:.75rem;}
-[data-atoms="app"] li[data-atom=li] > figure{width:44px;height:44px;margin-right:.75rem}
+[data-atoms="app"] li[data-atom=li] > figure{width:44px;height:44px;margin-right:.75rem;-webkit-background-size:cover;-moz-background-size:cover;-ms-background-size:cover;-o-background-size:cover;background-size:cover}
 [data-atoms="app"] li[data-atom=li] > div{-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;box-flex:1;-ms-flex:1 0 auto;}
 [data-atoms="app"] li[data-atom=li] > div span{float:right;font-size:.8rem}
 [data-atoms="app"] li[data-atom=li] > div strong,[data-atoms="app"] li[data-atom=li] > div small{display:block;line-height:1.4rem}
