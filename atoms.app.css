@@ -23,7 +23,7 @@ button > .icon + abbr{margin-left:.25em}
 [data-atoms="app"] section button.small{font-size:.9rem}
 [data-atoms="app"] section button.tiny{font-size:.8rem;padding:.5em .6em}
 [data-atoms="app"] section button.fluid{width:100%;position:relative;}
-[data-atoms="app"] section button.fluid:not(.icon) > .icon{position:absolute;left:1em}
+[data-atoms="app"] section button.fluid:not(.icon) > .icon{position:absolute;left:1rem}
 [data-atoms="app"] section button[disabled]{cursor:default}
 [data-atoms="app"] section button + button{margin-right:.2em}
 
