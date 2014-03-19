@@ -11,6 +11,7 @@
     Aside: {},
     Modal: {},
     Section: {},
+    Extension: {},
     Url: null
   };
 

@@ -10,7 +10,7 @@ Basic Quo Module
 
 (function() {
   "use strict";
-  var Atoms, MODULE_KEYWORDS, Quo, _guid, _mustache,
+  var Atoms, MODULE_KEYWORDS, Quo, __getConstructor, _guid, _mustache,
     __slice = [].slice,
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
     __hasProp = {}.hasOwnProperty,
@@ -1916,7 +1916,7 @@ Basic Quo Module
   })(Quo);
 
   Atoms = this.Atoms = {
-    version: "0.03.13",
+    version: "0.03.19",
     Core: {},
     Class: {},
     Atom: {},
@@ -1967,56 +1967,66 @@ Basic Quo Module
       }
     },
     chemistry: function(children) {
-      var attributes, base, class_name, index, item, key, type, _i, _len, _results;
+      var attributes, index, item, key, _i, _len, _results;
       children = this.attributes.children || this["default"].children || [];
       _results = [];
       for (index = _i = 0, _len = children.length; _i < _len; index = ++_i) {
         item = children[index];
         _results.push((function() {
-          var _ref, _ref1, _ref2, _ref3, _ref4, _results1;
+          var _ref, _ref1, _ref2, _results1;
           _results1 = [];
           for (key in item) {
-            base = key.split(".");
-            type = base[0];
-            class_name = base[1];
-            if (Atoms[type][class_name] != null) {
-              attributes = item[key];
-              if (((_ref = this["default"]) != null ? (_ref1 = _ref.children) != null ? (_ref2 = _ref1[index]) != null ? _ref2[key] : void 0 : void 0 : void 0) != null) {
-                attributes = Atoms.Core.Helper.mix(item[key], (_ref3 = this["default"].children) != null ? (_ref4 = _ref3[index]) != null ? _ref4[key] : void 0 : void 0);
-              }
-              _results1.push(this.appendChild(type, class_name, attributes));
-            } else {
-              _results1.push(void 0);
+            attributes = item[key];
+            if (((_ref = this["default"]) != null ? (_ref1 = _ref.children) != null ? (_ref2 = _ref1[index]) != null ? _ref2[key] : void 0 : void 0 : void 0) != null) {
+              attributes = Atoms.Core.Helper.mix(item[key], this["default"].children[index][key]);
             }
+            _results1.push(this.appendChild(key, attributes));
           }
           return _results1;
         }).call(this));
       }
       return _results;
     },
-    appendChild: function(type, class_name, attributes) {
-      var child;
+    appendChild: function(class_name, attributes) {
+      var child, child_constructor;
       if (attributes == null) {
         attributes = {};
       }
-      if (this.__available(type, class_name)) {
-        attributes.parent = attributes.parent || this;
-        child = new Atoms[type][class_name](attributes);
-        this.children.push(child);
-        if (attributes.id) {
-          this[attributes.id] = child;
+      child_constructor = __getConstructor(class_name);
+      if (child_constructor) {
+        if (this.__available(child_constructor)) {
+          attributes.parent = attributes.parent || this;
+          child = new child_constructor(attributes);
+          this.children.push(child);
+          if (attributes.id) {
+            this[attributes.id] = child;
+          }
+          return child;
+        } else {
+          return console.error("Instance " + class_name + " not available in " + this.constructor.type + "." + this.constructor.base + " #" + this.constructor.name + ".");
         }
-        return child;
       } else {
-        return console.error("Instance " + type + "." + class_name + " no available in " + constructor.name + " (" + constructor.base + ")");
+        return console.error("Instance " + class_name + " doesn't exists.");
       }
     },
-    __available: function(type, class_name) {
-      var instance, _ref;
-      instance = Atoms[type][class_name];
-      instance = instance.base || instance.name;
-      return !this.constructor.available || (_ref = "" + type + "." + instance, __indexOf.call(this.constructor.available, _ref) >= 0);
+    __available: function(instance) {
+      var base;
+      base = ("" + instance.type + ".") + (instance.base || instance.name);
+      return !this.constructor.available || __indexOf.call(this.constructor.available, base) >= 0;
     }
+  };
+
+  __getConstructor = function(class_name) {
+    var instance, item, _i, _len, _ref;
+    instance = Atoms;
+    _ref = class_name.split(".");
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      item = _ref[_i];
+      if (instance != null) {
+        instance = instance[item];
+      }
+    }
+    return instance;
   };
 
   /*
@@ -2715,6 +2725,8 @@ Basic Quo Module
 
     Atom.include(Atoms.Core.Output);
 
+    Atom.type = "Atom";
+
     function Atom(attributes) {
       var EVENT, _base;
       this.attributes = attributes;
@@ -2727,7 +2739,6 @@ Basic Quo Module
         };
       }
       this.attributes = Atoms.Core.Helper.mix(this.attributes, this["default"]);
-      this.constructor.type = "Atom";
       this.scaffold();
       if (this.entity) {
         attributes = (typeof (_base = this.entity).parse === "function" ? _base.parse() : void 0) || this.entity.attributes();
@@ -3053,6 +3064,8 @@ Basic Quo Module
 
     Molecule.include(Atoms.Core.Output);
 
+    Molecule.type = "Molecule";
+
     Molecule.prototype._entities = [];
 
     function Molecule(attributes) {
@@ -3066,7 +3079,6 @@ Basic Quo Module
         };
       }
       this.children = [];
-      this.constructor.type = "Molecule";
       this.scaffold();
       this.output();
       this.chemistry();
@@ -3101,7 +3113,7 @@ Basic Quo Module
         }
       }
       attributes = Atoms.Core.Helper.mix(attributes, (_ref1 = this["default"].children) != null ? _ref1[this.attributes.entityAtom] : void 0);
-      return this._entities.push(this.appendChild("Atom", this.attributes.bind.atom, attributes));
+      return this._entities.push(this.appendChild("Atom." + this.attributes.bind.atom, attributes));
     };
 
     Molecule.prototype._removeAtomsEntities = function() {
@@ -3148,6 +3160,8 @@ Basic Quo Module
 
     Organism.include(Atoms.Core.Output);
 
+    Organism.type = "Organism";
+
     _file = void 0;
 
     function Organism(attributes, scaffold) {
@@ -3159,7 +3173,6 @@ Basic Quo Module
         };
       }
       this.children = [];
-      this.constructor.type = this.constructor.type || "Organism";
       if (scaffold) {
         _file = this._getScaffold(scaffold);
       }
