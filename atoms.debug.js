@@ -1916,7 +1916,7 @@ Basic Quo Module
   })(Quo);
 
   Atoms = this.Atoms = {
-    version: "0.03.22",
+    version: "0.03.24",
     Core: {},
     Class: {},
     Atom: {},
@@ -3090,7 +3090,7 @@ Basic Quo Module
     Molecule.prototype.entity = function(entities) {
       var entity, _i, _len, _ref, _results;
       this._removeAtomsEntities();
-      if ((((_ref = this.attributes.bind) != null ? _ref.entity : void 0) != null) && (this.attributes.bind.atom != null) && (Atoms.Atom[this.attributes.bind.atom] != null)) {
+      if ((((_ref = this.attributes.bind) != null ? _ref.entity : void 0) != null) && (this.attributes.bind.atom != null)) {
         _results = [];
         for (_i = 0, _len = entities.length; _i < _len; _i++) {
           entity = entities[_i];
@@ -3116,7 +3116,7 @@ Basic Quo Module
         }
       }
       attributes = Atoms.Core.Helper.mix(attributes, (_ref1 = this["default"].children) != null ? _ref1[this.attributes.entityAtom] : void 0);
-      atom = this.appendChild("Atom." + this.attributes.bind.atom, attributes);
+      atom = this.appendChild("" + this.attributes.bind.atom, attributes);
       if (record) {
         this._records.push(atom);
       }
