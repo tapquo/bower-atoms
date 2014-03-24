@@ -1916,7 +1916,7 @@ Basic Quo Module
   })(Quo);
 
   Atoms = this.Atoms = {
-    version: "0.03.19",
+    version: "0.03.22",
     Core: {},
     Class: {},
     Atom: {},
@@ -3066,7 +3066,7 @@ Basic Quo Module
 
     Molecule.type = "Molecule";
 
-    Molecule.prototype._entities = [];
+    Molecule.prototype._records = [];
 
     function Molecule(attributes) {
       var _ref;
@@ -3100,8 +3100,11 @@ Basic Quo Module
       }
     };
 
-    Molecule.prototype._addAtomEntity = function(entity) {
-      var attributes, property, _i, _len, _ref, _ref1;
+    Molecule.prototype._addAtomEntity = function(entity, record) {
+      var atom, attributes, property, _i, _len, _ref, _ref1;
+      if (record == null) {
+        record = true;
+      }
       attributes = {
         entity: entity
       };
@@ -3113,17 +3116,21 @@ Basic Quo Module
         }
       }
       attributes = Atoms.Core.Helper.mix(attributes, (_ref1 = this["default"].children) != null ? _ref1[this.attributes.entityAtom] : void 0);
-      return this._entities.push(this.appendChild("Atom." + this.attributes.bind.atom, attributes));
+      atom = this.appendChild("Atom." + this.attributes.bind.atom, attributes);
+      if (record) {
+        this._records.push(atom);
+      }
+      return atom;
     };
 
     Molecule.prototype._removeAtomsEntities = function() {
       var entity, _i, _len, _ref;
-      _ref = this._entities;
+      _ref = this._records;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         entity = _ref[_i];
         entity.el.remove();
       }
-      return this._entities = [];
+      return this._records = [];
     };
 
     Molecule.prototype._bindEntityEvents = function() {

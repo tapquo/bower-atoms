@@ -27,7 +27,7 @@ button > .icon + abbr{margin-left:.25em}
 [data-atoms="app"] section button[disabled]{cursor:default}
 [data-atoms="app"] section button + button{margin-right:.2em}
 
-[data-atoms="app"] fieldset,[data-atoms="app"] form{position:relative;width:100%;min-height:1rem;}
+[data-atoms="app"] fieldset,[data-atoms="app"] form{position:relative;width:100%;min-height:2rem;}
 [data-atoms="app"] fieldset[molecule-search],[data-atoms="app"] form[molecule-search]{display:-webkit-box;display:-moz-box;display:-o-box;display:box;display:-ms-flexbox;-webkit-box-pack:justify;-moz-box-pack:justify;-o-box-pack:justify;box-pack:justify;-ms-flex-pack:justify;}
 [data-atoms="app"] fieldset[molecule-search] > *,[data-atoms="app"] form[molecule-search] > *{display:inline-block;-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;box-flex:1;-ms-flex:1 0 auto}
 [data-atoms="app"] fieldset[molecule-search] > button,[data-atoms="app"] form[molecule-search] > button{position:absolute;right:1px}
@@ -109,7 +109,7 @@ button > .icon + abbr{margin-left:.25em}
 [data-atoms="app"] article section,[data-atoms="app"] aside section{overflow-x:hidden;overflow-y:scroll;-webkit-overflow-scrolling:touch;-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;box-flex:1;-ms-flex:1 0 auto;}
 [data-atoms="app"] article section.padding,[data-atoms="app"] aside section.padding{padding:.75rem 1rem}
 [data-atoms="app"] article section > *,[data-atoms="app"] aside section > *{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
-[data-atoms="app"] aside section{padding:.5rem 1rem;width:100%}
+[data-atoms="app"] aside section{width:100%}
 
 [data-atoms="app"],html{height:100%;width:100%;margin:0;padding:0;overflow:hidden;}
 [data-atoms="app"] > aside,html > aside,[data-atoms="app"] > article,html > article{display:-webkit-box;display:-moz-box;display:-o-box;display:box;display:-ms-flexbox;-webkit-box-orient:vertical;-moz-box-orient:vertical;-o-box-orient:vertical;box-orient:vertical;-ms-flex-direction:column;height:inherit;webkit-transform:translate3d(0,0,0);}

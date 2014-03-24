@@ -1,5 +1,5 @@
 (function() {
-  var _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8,
+  var _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6, _ref7, _ref8, _ref9,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
@@ -104,7 +104,7 @@
 
     Button.base = "Button";
 
-    function Button(attributes) {
+    function Button() {
       this["default"] = {
         events: ["touch"]
       };
@@ -248,7 +248,7 @@
 
     Input.base = "Input";
 
-    function Input(attributes) {
+    function Input() {
       this["default"] = {
         type: "text"
       };
@@ -260,14 +260,6 @@
         return this.el.val(value);
       } else {
         return this.el.val();
-      }
-    };
-
-    Input.prototype.error = function(value) {
-      if (value != null) {
-        return this.el.filter("input").addClass("error");
-      } else {
-        return this.el.filter("input").removeClass("error");
       }
     };
 
@@ -435,12 +427,6 @@
       }
     };
 
-    Switch.prototype.error = function(value) {
-      var method;
-      method = value != null ? "addClass" : "removeClass";
-      return this.el[method]("error");
-    };
-
     Switch.prototype.onTouch = function(event) {
       this.value(!(this.el.attr("checked")));
       if (__indexOf.call(this.attributes.events, "change") >= 0) {
@@ -484,14 +470,6 @@
       }
     };
 
-    Textarea.prototype.error = function(value) {
-      if (value != null) {
-        return this.el.addClass("error");
-      } else {
-        return this.el.removeClass("error");
-      }
-    };
-
     return Textarea;
 
   })(Atoms.Class.Atom);
@@ -511,49 +489,60 @@
   Atoms.Molecule.Form = (function(_super) {
     __extends(Form, _super);
 
+    function Form() {
+      this.onButtonTouch = __bind(this.onButtonTouch, this);
+      this.onSwitchChange = __bind(this.onSwitchChange, this);
+      this.onSelectChange = __bind(this.onSelectChange, this);
+      this.onInputKeyup = __bind(this.onInputKeyup, this);
+      this.onInputKeypress = __bind(this.onInputKeypress, this);
+      _ref7 = Form.__super__.constructor.apply(this, arguments);
+      return _ref7;
+    }
+
     Form.template = "<form {{#if.id}}id=\"{{id}}\"{{/if.id}} {{#if.style}}class=\"{{style}}\"{{/if.style}}></form>";
 
     Form.available = ["Atom.Label", "Atom.Input", "Atom.Textarea", "Atom.Select", "Atom.Switch", "Atom.Button"];
 
+    Form.events = ["change", "submit", "error"];
+
     Form.base = "Form";
 
-    function Form() {
-      this.onSwitchChange = __bind(this.onSwitchChange, this);
-      this.onSelectChange = __bind(this.onSelectChange, this);
-      this.onButtonTouch = __bind(this.onButtonTouch, this);
-      this.onInputKeyup = __bind(this.onInputKeyup, this);
-      this.onInputKeypress = __bind(this.onInputKeypress, this);
-      Form.__super__.constructor.apply(this, arguments);
-    }
-
     Form.prototype.value = function() {
-      var child, properties, _i, _len, _ref7;
+      var child, properties, _i, _len, _ref8;
       properties = {};
-      _ref7 = this.children;
-      for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
-        child = _ref7[_i];
-        if (child.value != null) {
-          properties[child.attributes.name] = child.value();
+      _ref8 = this.children;
+      for (_i = 0, _len = _ref8.length; _i < _len; _i++) {
+        child = _ref8[_i];
+        if (child.attributes.name && (child.value != null)) {
+          properties[child.attributes.name.toLowerCase()] = child.value();
         }
       }
       return properties;
     };
 
     Form.prototype.onInputKeypress = function(event, atom) {
-      return this.bubble("keypress", event);
+      return this._bubbleFormChange(event, atom);
     };
 
     Form.prototype.onInputKeyup = function(event, atom) {
-      return this.bubble("keyup", event);
+      return this._bubbleFormChange(event, atom);
+    };
+
+    Form.prototype.onSelectChange = function(event, atom) {
+      return this._bubbleFormChange(event, atom);
+    };
+
+    Form.prototype.onSwitchChange = function(event, atom) {
+      return this._bubbleFormChange(event, atom);
     };
 
     Form.prototype.onButtonTouch = function(event, atom) {
-      var child, required, _i, _len, _ref7;
+      var child, required, _i, _len, _ref8;
       event.preventDefault();
       required = true;
-      _ref7 = this.children;
-      for (_i = 0, _len = _ref7.length; _i < _len; _i++) {
-        child = _ref7[_i];
+      _ref8 = this.children;
+      for (_i = 0, _len = _ref8.length; _i < _len; _i++) {
+        child = _ref8[_i];
         if (child.value != null) {
           if (child.attributes.required && !child.value()) {
             child.el.addClass("error");
@@ -563,22 +552,25 @@
           }
         }
       }
-      if (required && (this.attributes.events != null) && __indexOf.call(this.attributes.events, "submit") >= 0) {
-        if (required) {
-          this.bubble("submit", event);
-        }
-        return false;
+      if (required && __indexOf.call(this.attributes.events, "submit") >= 0) {
+        this.bubble("submit", event);
       }
+      if (!(required && __indexOf.call(this.attributes.events, "error") >= 0)) {
+        this.bubble("error", event);
+      }
+      return false;
     };
 
-    Form.prototype.onSelectChange = function(event, atom) {
+    Form.prototype._bubbleFormChange = function(event, atom) {
       event.preventDefault();
-      return this.bubble("change", event);
-    };
-
-    Form.prototype.onSwitchChange = function(event, atom) {
-      event.preventDefault();
-      return this.bubble("change", event);
+      if (atom.attributes.required && !atom.value()) {
+        atom.el.addClass("error");
+      } else {
+        atom.el.removeClass("error");
+      }
+      if (__indexOf.call(this.attributes.events, "change") >= 0) {
+        return this.bubble("change", event);
+      }
     };
 
     return Form;
@@ -601,8 +593,10 @@
     __extends(List, _super);
 
     function List() {
-      _ref7 = List.__super__.constructor.apply(this, arguments);
-      return _ref7;
+      this.select = __bind(this.select, this);
+      this.findBy = __bind(this.findBy, this);
+      _ref8 = List.__super__.constructor.apply(this, arguments);
+      return _ref8;
     }
 
     List.template = "<ul {{#if.id}}id=\"{{id}}\"{{/if.id}} {{#if.style}}class=\"{{style}}\"{{/if.style}}></ul>";
@@ -611,12 +605,48 @@
 
     List.base = "List";
 
-    List.prototype.filter = function() {
-      return this;
+    List.prototype.findBy = function(field, value) {
+      return this.select(function(entity) {
+        var _ref9;
+        if (((_ref9 = entity[field]) != null ? _ref9.toLowerCase().trim() : void 0) === value.toLowerCase().trim()) {
+          return entity;
+        }
+      });
+    };
+
+    List.prototype.select = function(callback) {
+      var record, records, _i, _len, _ref9, _results;
+      this.clean();
+      this.children = [];
+      if (callback) {
+        records = (function() {
+          var _i, _len, _ref9, _results;
+          _ref9 = this._records;
+          _results = [];
+          for (_i = 0, _len = _ref9.length; _i < _len; _i++) {
+            record = _ref9[_i];
+            if (callback(record.entity)) {
+              _results.push(record);
+            }
+          }
+          return _results;
+        }).call(this);
+      }
+      _ref9 = records || this._records;
+      _results = [];
+      for (_i = 0, _len = _ref9.length; _i < _len; _i++) {
+        record = _ref9[_i];
+        _results.push(this._addAtomEntity(record.entity, record = false));
+      }
+      return _results;
+    };
+
+    List.prototype.all = function() {
+      return this.select();
     };
 
     List.prototype.clean = function() {
-      return this;
+      return this.el.html("");
     };
 
     return List;
@@ -654,7 +684,7 @@
 
     Navigation.prototype.onButtonTouch = function(event, atom) {
       var path;
-      this.__activeChild(atom);
+      this._active(atom);
       if ((this.attributes.events != null) && __indexOf.call(this.attributes.events, "select") >= 0) {
         this.bubble("select", event);
       }
@@ -667,29 +697,28 @@
         } else if (path != null) {
           Atoms.Url.path(path);
         }
-        return false;
       }
+      return false;
     };
 
     Navigation.prototype.onArticleNavigation = function() {
-      var article, child, event, hierarchy, path, _i, _len, _ref8;
+      var article, child, event, hierarchy, path, _i, _len, _ref9;
       event = arguments[0], article = arguments[1], hierarchy = 3 <= arguments.length ? __slice.call(arguments, 2) : [];
       path = Atoms.Url.path().substr(1);
-      _ref8 = this.children;
-      for (_i = 0, _len = _ref8.length; _i < _len; _i++) {
-        child = _ref8[_i];
+      _ref9 = this.children;
+      for (_i = 0, _len = _ref9.length; _i < _len; _i++) {
+        child = _ref9[_i];
         if (!(child.attributes.path === path)) {
           continue;
         }
-        this.__activeChild(child);
+        this._active(child);
         break;
       }
       return false;
     };
 
-    Navigation.prototype.__activeChild = function(atom) {
-      this.el.parent().find("[data-atom=button]").removeClass("active");
-      return atom.el.addClass("active");
+    Navigation.prototype._active = function(atom) {
+      return atom.el.addClass("active").siblings().removeClass("active");
     };
 
     return Navigation;
@@ -715,15 +744,18 @@
 
     Search.available = ["Atom.Input", "Atom.Button"];
 
+    Search.events = ["change", "enter"];
+
     Search.base = "Search";
 
     function Search() {
-      this.buttonTouch = __bind(this.buttonTouch, this);
-      this.inputKeyup = __bind(this.inputKeyup, this);
+      this.onButtonTouch = __bind(this.onButtonTouch, this);
+      this.onInputKeyup = __bind(this.onInputKeyup, this);
       this["default"] = {
         children: [
           {
             "Atom.Input": {
+              id: "input",
               type: "search",
               placeholder: "Type your search...",
               events: ["keyup"]
@@ -738,22 +770,30 @@
       Search.__super__.constructor.apply(this, arguments);
     }
 
-    Search.prototype.inputKeyup = function(event, atom) {
-      this.trigger("keyup", event.keyCode);
-      if (event.keyCode === 13) {
-        return this._search(event, atom);
+    Search.prototype.value = function(value) {
+      return this.input.value(value || null);
+    };
+
+    Search.prototype.onInputKeyup = function(event, atom) {
+      if (__indexOf.call(this.attributes.events, "change") >= 0) {
+        this.bubble("change", event.keyCode);
       }
+      if (event.keyCode === 13) {
+        this._bubbleSearchEnter(event, atom);
+      }
+      return false;
     };
 
-    Search.prototype.buttonTouch = function(event, atom) {
-      return this._search(event, atom);
+    Search.prototype.onButtonTouch = function(event, atom) {
+      this._bubbleSearchEnter(event, atom);
+      return false;
     };
 
-    Search.prototype._search = function(event, atom) {
+    Search.prototype._bubbleSearchEnter = function(event, atom) {
       var value;
-      value = this.input[0].el.val();
-      if (value !== "") {
-        return this.bubble("enter", value, atom);
+      value = this.input.value();
+      if (value !== "" && __indexOf.call(this.attributes.events, "enter") >= 0) {
+        return this.bubble("enter", event);
       }
     };
 
@@ -789,12 +829,12 @@
     }
 
     Article.prototype.render = function() {
-      var animation_end, _i, _len, _ref8, _results;
+      var animation_end, _i, _len, _ref9, _results;
       Article.__super__.render.apply(this, arguments);
-      _ref8 = Atoms.Core.Constants.ANIMATION.END.split(" ");
+      _ref9 = Atoms.Core.Constants.ANIMATION.END.split(" ");
       _results = [];
-      for (_i = 0, _len = _ref8.length; _i < _len; _i++) {
-        animation_end = _ref8[_i];
+      for (_i = 0, _len = _ref9.length; _i < _len; _i++) {
+        animation_end = _ref9[_i];
         _results.push(this.el.bind(animation_end, this.onAnimationEnd));
       }
       return _results;
@@ -894,12 +934,12 @@
     }
 
     Aside.prototype.render = function() {
-      var animation_end, _i, _len, _ref8, _results;
+      var animation_end, _i, _len, _ref9, _results;
       Aside.__super__.render.apply(this, arguments);
-      _ref8 = Atoms.Core.Constants.ANIMATION.END.split(" ");
+      _ref9 = Atoms.Core.Constants.ANIMATION.END.split(" ");
       _results = [];
-      for (_i = 0, _len = _ref8.length; _i < _len; _i++) {
-        animation_end = _ref8[_i];
+      for (_i = 0, _len = _ref9.length; _i < _len; _i++) {
+        animation_end = _ref9[_i];
         _results.push(this.el.bind(animation_end, this.onAnimationEnd));
       }
       return _results;
@@ -914,8 +954,8 @@
     };
 
     Aside.prototype.out = function() {
-      var _ref8;
-      if ((_ref8 = this.el) != null ? _ref8.hasClass("active") : void 0) {
+      var _ref9;
+      if ((_ref9 = this.el) != null ? _ref9.hasClass("active") : void 0) {
         return this.el.attr("data-state", "out");
       }
     };
@@ -1016,7 +1056,7 @@
     Modal.base = "Modal";
 
     function Modal(attributes) {
-      var animation_end, block_el, _i, _len, _ref8;
+      var animation_end, block_el, _i, _len, _ref9;
       if (attributes == null) {
         attributes = {};
       }
@@ -1026,9 +1066,9 @@
       Atoms.$(this.attributes.container || document.body).prepend(block_el);
       this.attributes.container = block_el;
       this.render();
-      _ref8 = Atoms.Core.Constants.ANIMATION.END.split(" ");
-      for (_i = 0, _len = _ref8.length; _i < _len; _i++) {
-        animation_end = _ref8[_i];
+      _ref9 = Atoms.Core.Constants.ANIMATION.END.split(" ");
+      for (_i = 0, _len = _ref9.length; _i < _len; _i++) {
+        animation_end = _ref9[_i];
         this.el.bind(animation_end, this.onAnimationEnd);
       }
       Atoms.App.Modal[this.constructor.name] = this;
@@ -1075,8 +1115,8 @@
     __extends(Loading, _super);
 
     function Loading() {
-      _ref8 = Loading.__super__.constructor.apply(this, arguments);
-      return _ref8;
+      _ref9 = Loading.__super__.constructor.apply(this, arguments);
+      return _ref9;
     }
 
     return Loading;
@@ -1103,6 +1143,8 @@
     Section.template = "<section {{#if.id}}id=\"{{id}}\"{{/if.id}} {{#if.style}}class=\"{{style}}\"{{/if.style}}></section>";
 
     Section.base = "Section";
+
+    Section.available = ["Molecule.Search", "Molecule.Form", "Molecule.List", "Atom.Button"];
 
     function Section() {
       Section.__super__.constructor.apply(this, arguments);
