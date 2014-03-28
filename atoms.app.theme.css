@@ -331,9 +331,20 @@ button {
 [data-atoms="app"] article > section [data-atom=li] {
   border-bottom: solid 1px #dcdcdc;
 }
+[data-atoms="app"] article > section [data-atom=li].anchor {
+  color: #7a7a7a;
+}
+[data-atoms="app"] article > section:not(.padding) [data-atom=li]:not(.anchor) {
+  background-color: #fff;
+}
 [data-atoms="app"] aside > section [data-atom=li] {
-  color: #e0e0e0;
   border-bottom: solid 1px #393939;
+}
+[data-atoms="app"] aside > section [data-atom=li]:not(.anchor) {
+  color: #e0e0e0;
+}
+[data-atoms="app"] aside > section [data-atom=li].anchor {
+  color: #878787;
 }
 
 [data-atoms="app"] header nav a {
