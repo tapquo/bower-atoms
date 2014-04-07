@@ -613,7 +613,7 @@ label {
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-[data-atoms="app"] > article.active[data-state="aside-in"] {
+[data-atoms="app"] > article.active[data-state="aside-show"] {
   -webkit-animation-name: article-aside;
   -moz-animation-name: article-aside;
   -ms-animation-name: article-aside;
@@ -633,7 +633,7 @@ label {
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-[data-atoms="app"] > article.active[data-state="aside-out"] {
+[data-atoms="app"] > article.active[data-state="aside-hide"] {
   -webkit-animation-name: article-aside;
   -moz-animation-name: article-aside;
   -ms-animation-name: article-aside;
