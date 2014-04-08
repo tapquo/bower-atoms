@@ -62,6 +62,9 @@ button > .icon + abbr{margin-left:.25em}
 
 [data-atoms="app"] textarea{min-height:5em;margin-bottom:0}
 
+[data-atoms="app"] [data-molecule="div"]{position:relative;width:100%;min-height:2.5rem;}
+[data-atoms="app"] [data-molecule="div"].padding{padding:.75rem 1rem}
+
 [data-atoms="app"] [data-molecule="form"]{position:relative;width:100%;min-height:2.5rem}
 
 [data-atoms="app"] [data-molecule=list]{min-height:2.5rem}
@@ -137,7 +140,11 @@ button > .icon + abbr{margin-left:.25em}
 [data-atoms="app"] .right{float:right}
 [data-atoms="app"] .rounded{-webkit-border-radius:1rem;-moz-border-radius:1rem;-ms-border-radius:1rem;-o-border-radius:1rem;border-radius:1rem}
 [data-atoms="app"] .circular{-webkit-border-radius:500rem;-moz-border-radius:500rem;-ms-border-radius:500rem;-o-border-radius:500rem;border-radius:500rem}
-[data-atoms="app"] .margin-top{margin-top:1rem}
-[data-atoms="app"] .margin-right{margin-right:1rem}
-[data-atoms="app"] .margin-bottom{margin-bottom:1rem}
-[data-atoms="app"] .margin-left{margin-left:1rem}
+[data-atoms="app"] .margin-top{margin-top:.75rem}
+[data-atoms="app"] .margin-right{margin-right:.75rem}
+[data-atoms="app"] .margin-bottom{margin-bottom:.75rem}
+[data-atoms="app"] .margin-left{margin-left:.75rem}
+[data-atoms="app"] .padding-top{padding-top:.75rem}
+[data-atoms="app"] .padding-right{padding-right:.75rem}
+[data-atoms="app"] .padding-bottom{padding-bottom:.75rem}
+[data-atoms="app"] .padding-left{padding-left:.75rem}
