@@ -5,7 +5,6 @@ button {
   -webkit-border-radius: 0.2rem;
   -moz-border-radius: 0.2rem;
   -ms-border-radius: 0.2rem;
-  -o-border-radius: 0.2rem;
   border-radius: 0.2rem;
   background-color: #ebebeb;
   color: #999;
@@ -17,12 +16,10 @@ button {
   -webkit-box-shadow: 0em -0.185rem 0em rgba(0,0,0,0.1) inset;
   -moz-box-shadow: 0em -0.185rem 0em rgba(0,0,0,0.1) inset;
   -ms-box-shadow: 0em -0.185rem 0em rgba(0,0,0,0.1) inset;
-  -o-box-shadow: 0em -0.185rem 0em rgba(0,0,0,0.1) inset;
   box-shadow: 0em -0.185rem 0em rgba(0,0,0,0.1) inset;
   -webkit-transition: opacity 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
   -moz-transition: opacity 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
   -ms-transition: opacity 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
-  -o-transition: opacity 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
   transition: opacity 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 [data-atoms="app"] section button:not([disabled]):hover {
@@ -34,7 +31,6 @@ button {
   -webkit-box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.1) inset;
   -moz-box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.1) inset;
   -ms-box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.1) inset;
-  -o-box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.1) inset;
   box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.1) inset;
 }
 [data-atoms="app"] section button:not([disabled]).accept {
@@ -93,13 +89,11 @@ button {
   -webkit-border-radius: 0.2rem;
   -moz-border-radius: 0.2rem;
   -ms-border-radius: 0.2rem;
-  -o-border-radius: 0.2rem;
   border-radius: 0.2rem;
   color: #2f2f2f;
   -webkit-transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
   -moz-transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
   -ms-transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
-  -o-transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
   transition: background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 [data-atoms="app"] input[type="text"].error,
@@ -266,7 +260,6 @@ button {
   -webkit-border-radius: 0.1rem;
   -moz-border-radius: 0.1rem;
   -ms-border-radius: 0.1rem;
-  -o-border-radius: 0.1rem;
   border-radius: 0.1rem;
 }
 [data-atoms="app"] input[type=range]:hover,
@@ -277,7 +270,6 @@ button {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
   background-color: #fdfdfd;
   border: 1px solid #cecece;
@@ -295,7 +287,6 @@ label {
   -webkit-border-radius: 0.2rem;
   -moz-border-radius: 0.2rem;
   -ms-border-radius: 0.2rem;
-  -o-border-radius: 0.2rem;
   border-radius: 0.2rem;
   color: rgba(0,0,0,0.6);
 }
@@ -338,7 +329,6 @@ label {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
   background-color: #cecece;
 }
@@ -348,13 +338,11 @@ label {
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
   border-radius: 1rem;
   background-color: #ddd;
   -webkit-transition: all 300ms 150ms;
   -moz-transition: all 300ms 150ms;
   -ms-transition: all 300ms 150ms;
-  -o-transition: all 300ms 150ms;
   transition: all 300ms 150ms;
 }
 [data-atoms="app"] input[type=checkbox]:after {
@@ -363,12 +351,10 @@ label {
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
   border-radius: 1rem;
   -webkit-transition: left 150ms;
   -moz-transition: left 150ms;
   -ms-transition: left 150ms;
-  -o-transition: left 150ms;
   transition: left 150ms;
 }
 [data-atoms="app"] input[type=checkbox]:checked {
@@ -399,7 +385,6 @@ label {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
-  -o-border-radius: 0;
   border-radius: 0;
 }
 [data-atoms="app"] > article > section [data-molecule="navigation"] > [data-atom="button"]:not(:first-child) {
@@ -409,14 +394,12 @@ label {
   -webkit-border-radius: 0.2rem 0 0 0.2rem;
   -moz-border-radius: 0.2rem 0 0 0.2rem;
   -ms-border-radius: 0.2rem 0 0 0.2rem;
-  -o-border-radius: 0.2rem 0 0 0.2rem;
   border-radius: 0.2rem 0 0 0.2rem;
 }
 [data-atoms="app"] > article > section [data-molecule="navigation"] > [data-atom="button"]:last-child {
   -webkit-border-radius: 0 0.2rem 0.2rem 0;
   -moz-border-radius: 0 0.2rem 0.2rem 0;
   -ms-border-radius: 0 0.2rem 0.2rem 0;
-  -o-border-radius: 0 0.2rem 0.2rem 0;
   border-radius: 0 0.2rem 0.2rem 0;
 }
 [data-atoms="app"] > article > [data-molecule="navigation"] {
@@ -427,7 +410,6 @@ label {
   -webkit-box-shadow: inset 0 -0.25rem #6441a5;
   -moz-box-shadow: inset 0 -0.25rem #6441a5;
   -ms-box-shadow: inset 0 -0.25rem #6441a5;
-  -o-box-shadow: inset 0 -0.25rem #6441a5;
   box-shadow: inset 0 -0.25rem #6441a5;
 }
 [data-atoms="app"] > aside > header [data-molecule="navigation"] button {
@@ -454,7 +436,6 @@ label {
   -webkit-text-shadow: 0 0.1rem #292929;
   -moz-text-shadow: 0 0.1rem #292929;
   -ms-text-shadow: 0 0.1rem #292929;
-  -o-text-shadow: 0 0.1rem #292929;
   text-shadow: 0 0.1rem #292929;
 }
 [data-atoms="app"] > article > footer [data-molecule="navigation"] button.active {
@@ -468,12 +449,10 @@ label {
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   -ms-box-shadow: none !important;
-  -o-box-shadow: none !important;
   box-shadow: none !important;
   -webkit-border-radius: 0 0.2rem 0.2rem 0;
   -moz-border-radius: 0 0.2rem 0.2rem 0;
   -ms-border-radius: 0 0.2rem 0.2rem 0;
-  -o-border-radius: 0 0.2rem 0.2rem 0;
   border-radius: 0 0.2rem 0.2rem 0;
   background-color: #cecece;
   color: #fff;
@@ -487,25 +466,20 @@ label {
   -webkit-transform-origin: 100% 100%;
   -moz-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
-  -o-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
   -webkit-animation-duration: 450ms;
   -moz-animation-duration: 450ms;
   -ms-animation-duration: 450ms;
-  -o-animation-duration: 450ms;
   -webkit-animation-duration: 450ms;
   -moz-animation-duration: 450ms;
   -ms-animation-duration: 450ms;
-  -o-animation-duration: 450ms;
   animation-duration: 450ms;
   -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -moz-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -ms-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -moz-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -ms-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 [data-atoms="app"] > article.active.aside {
@@ -516,22 +490,18 @@ label {
   -webkit-animation-name: article-in;
   -moz-animation-name: article-in;
   -ms-animation-name: article-in;
-  -o-animation-name: article-in;
   -webkit-animation-name: article-in;
   -moz-animation-name: article-in;
   -ms-animation-name: article-in;
-  -o-animation-name: article-in;
   animation-name: article-in;
 }
 [data-atoms="app"] > article.active[data-state="in"]:only-of-type {
   -webkit-animation-duration: 0s;
   -moz-animation-duration: 0s;
   -ms-animation-duration: 0s;
-  -o-animation-duration: 0s;
   -webkit-animation-duration: 0s;
   -moz-animation-duration: 0s;
   -ms-animation-duration: 0s;
-  -o-animation-duration: 0s;
   animation-duration: 0s;
 }
 [data-atoms="app"] > article.active[data-state="out"] {
@@ -539,29 +509,23 @@ label {
   -webkit-animation-name: article-in;
   -moz-animation-name: article-in;
   -ms-animation-name: article-in;
-  -o-animation-name: article-in;
   -webkit-animation-name: article-in;
   -moz-animation-name: article-in;
   -ms-animation-name: article-in;
-  -o-animation-name: article-in;
   animation-name: article-in;
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   -ms-animation-direction: reverse;
-  -o-animation-direction: reverse;
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   -ms-animation-direction: reverse;
-  -o-animation-direction: reverse;
   animation-direction: reverse;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 [data-atoms="app"] > article.active[data-state="back-in"] {
@@ -569,11 +533,9 @@ label {
   -webkit-animation-name: article-out;
   -moz-animation-name: article-out;
   -ms-animation-name: article-out;
-  -o-animation-name: article-out;
   -webkit-animation-name: article-out;
   -moz-animation-name: article-out;
   -ms-animation-name: article-out;
-  -o-animation-name: article-out;
   animation-name: article-out;
 }
 [data-atoms="app"] > article.active[data-state="back-out"] {
@@ -581,87 +543,69 @@ label {
   -webkit-animation-delay: 1;
   -moz-animation-delay: 1;
   -ms-animation-delay: 1;
-  -o-animation-delay: 1;
   -webkit-animation-delay: 1;
   -moz-animation-delay: 1;
   -ms-animation-delay: 1;
-  -o-animation-delay: 1;
   animation-delay: 1;
   -webkit-animation-name: article-out;
   -moz-animation-name: article-out;
   -ms-animation-name: article-out;
-  -o-animation-name: article-out;
   -webkit-animation-name: article-out;
   -moz-animation-name: article-out;
   -ms-animation-name: article-out;
-  -o-animation-name: article-out;
   animation-name: article-out;
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   -ms-animation-direction: reverse;
-  -o-animation-direction: reverse;
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   -ms-animation-direction: reverse;
-  -o-animation-direction: reverse;
   animation-direction: reverse;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 [data-atoms="app"] > article.active[data-state="aside-show"] {
   -webkit-animation-name: article-aside;
   -moz-animation-name: article-aside;
   -ms-animation-name: article-aside;
-  -o-animation-name: article-aside;
   -webkit-animation-name: article-aside;
   -moz-animation-name: article-aside;
   -ms-animation-name: article-aside;
-  -o-animation-name: article-aside;
   animation-name: article-aside;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 [data-atoms="app"] > article.active[data-state="aside-hide"] {
   -webkit-animation-name: article-aside;
   -moz-animation-name: article-aside;
   -ms-animation-name: article-aside;
-  -o-animation-name: article-aside;
   -webkit-animation-name: article-aside;
   -moz-animation-name: article-aside;
   -ms-animation-name: article-aside;
-  -o-animation-name: article-aside;
   animation-name: article-aside;
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   -ms-animation-direction: reverse;
-  -o-animation-direction: reverse;
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   -ms-animation-direction: reverse;
-  -o-animation-direction: reverse;
   animation-direction: reverse;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 [data-atoms="app"] > article header {
@@ -678,7 +622,6 @@ label {
     -webkit-transform: translateX(105%);
     -moz-transform: translateX(105%);
     -ms-transform: translateX(105%);
-    -o-transform: translateX(105%);
     transform: translateX(105%);
   }
 
@@ -686,7 +629,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -695,7 +637,6 @@ label {
     -webkit-transform: translateX(105%);
     -moz-transform: translateX(105%);
     -ms-transform: translateX(105%);
-    -o-transform: translateX(105%);
     transform: translateX(105%);
   }
 
@@ -703,7 +644,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -712,7 +652,6 @@ label {
     -webkit-transform: translateX(105%);
     -moz-transform: translateX(105%);
     -ms-transform: translateX(105%);
-    -o-transform: translateX(105%);
     transform: translateX(105%);
   }
 
@@ -720,7 +659,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -729,7 +667,6 @@ label {
     -webkit-transform: translateX(105%);
     -moz-transform: translateX(105%);
     -ms-transform: translateX(105%);
-    -o-transform: translateX(105%);
     transform: translateX(105%);
   }
 
@@ -737,7 +674,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -746,7 +682,6 @@ label {
     -webkit-transform: translateX(105%);
     -moz-transform: translateX(105%);
     -ms-transform: translateX(105%);
-    -o-transform: translateX(105%);
     transform: translateX(105%);
   }
 
@@ -754,7 +689,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -763,7 +697,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 
@@ -771,7 +704,6 @@ label {
     -webkit-transform: translateX(-21%);
     -moz-transform: translateX(-21%);
     -ms-transform: translateX(-21%);
-    -o-transform: translateX(-21%);
     transform: translateX(-21%);
     opacity: 0.5;
   }
@@ -781,7 +713,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 
@@ -789,7 +720,6 @@ label {
     -webkit-transform: translateX(-21%);
     -moz-transform: translateX(-21%);
     -ms-transform: translateX(-21%);
-    -o-transform: translateX(-21%);
     transform: translateX(-21%);
     opacity: 0.5;
   }
@@ -799,7 +729,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 
@@ -807,7 +736,6 @@ label {
     -webkit-transform: translateX(-21%);
     -moz-transform: translateX(-21%);
     -ms-transform: translateX(-21%);
-    -o-transform: translateX(-21%);
     transform: translateX(-21%);
     opacity: 0.5;
   }
@@ -817,7 +745,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 
@@ -825,7 +752,6 @@ label {
     -webkit-transform: translateX(-21%);
     -moz-transform: translateX(-21%);
     -ms-transform: translateX(-21%);
-    -o-transform: translateX(-21%);
     transform: translateX(-21%);
     opacity: 0.5;
   }
@@ -835,7 +761,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 
@@ -843,7 +768,6 @@ label {
     -webkit-transform: translateX(-21%);
     -moz-transform: translateX(-21%);
     -ms-transform: translateX(-21%);
-    -o-transform: translateX(-21%);
     transform: translateX(-21%);
     opacity: 0.5;
   }
@@ -853,7 +777,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 
@@ -861,7 +784,6 @@ label {
     -webkit-transform: translateX(256px);
     -moz-transform: translateX(256px);
     -ms-transform: translateX(256px);
-    -o-transform: translateX(256px);
     transform: translateX(256px);
   }
 }
@@ -870,7 +792,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 
@@ -878,7 +799,6 @@ label {
     -webkit-transform: translateX(256px);
     -moz-transform: translateX(256px);
     -ms-transform: translateX(256px);
-    -o-transform: translateX(256px);
     transform: translateX(256px);
   }
 }
@@ -887,7 +807,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 
@@ -895,7 +814,6 @@ label {
     -webkit-transform: translateX(256px);
     -moz-transform: translateX(256px);
     -ms-transform: translateX(256px);
-    -o-transform: translateX(256px);
     transform: translateX(256px);
   }
 }
@@ -904,7 +822,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 
@@ -912,7 +829,6 @@ label {
     -webkit-transform: translateX(256px);
     -moz-transform: translateX(256px);
     -ms-transform: translateX(256px);
-    -o-transform: translateX(256px);
     transform: translateX(256px);
   }
 }
@@ -921,7 +837,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 
@@ -929,7 +844,6 @@ label {
     -webkit-transform: translateX(256px);
     -moz-transform: translateX(256px);
     -ms-transform: translateX(256px);
-    -o-transform: translateX(256px);
     transform: translateX(256px);
   }
 }
@@ -940,20 +854,16 @@ label {
   -webkit-animation-duration: 450ms;
   -moz-animation-duration: 450ms;
   -ms-animation-duration: 450ms;
-  -o-animation-duration: 450ms;
   -webkit-animation-duration: 450ms;
   -moz-animation-duration: 450ms;
   -ms-animation-duration: 450ms;
-  -o-animation-duration: 450ms;
   animation-duration: 450ms;
   -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -moz-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -ms-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -moz-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -ms-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 [data-atoms="app"] > aside.active[data-state="in"] {
@@ -961,11 +871,9 @@ label {
   -webkit-animation-name: aside-in;
   -moz-animation-name: aside-in;
   -ms-animation-name: aside-in;
-  -o-animation-name: aside-in;
   -webkit-animation-name: aside-in;
   -moz-animation-name: aside-in;
   -ms-animation-name: aside-in;
-  -o-animation-name: aside-in;
   animation-name: aside-in;
 }
 [data-atoms="app"] > aside.active[data-state="out"] {
@@ -973,29 +881,23 @@ label {
   -webkit-animation-name: aside-in;
   -moz-animation-name: aside-in;
   -ms-animation-name: aside-in;
-  -o-animation-name: aside-in;
   -webkit-animation-name: aside-in;
   -moz-animation-name: aside-in;
   -ms-animation-name: aside-in;
-  -o-animation-name: aside-in;
   animation-name: aside-in;
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   -ms-animation-direction: reverse;
-  -o-animation-direction: reverse;
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   -ms-animation-direction: reverse;
-  -o-animation-direction: reverse;
   animation-direction: reverse;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 [data-atoms="app"] > aside header {
@@ -1006,7 +908,6 @@ label {
     -webkit-transform: translateX(-25%);
     -moz-transform: translateX(-25%);
     -ms-transform: translateX(-25%);
-    -o-transform: translateX(-25%);
     transform: translateX(-25%);
   }
 
@@ -1014,7 +915,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -1023,7 +923,6 @@ label {
     -webkit-transform: translateX(-25%);
     -moz-transform: translateX(-25%);
     -ms-transform: translateX(-25%);
-    -o-transform: translateX(-25%);
     transform: translateX(-25%);
   }
 
@@ -1031,7 +930,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -1040,7 +938,6 @@ label {
     -webkit-transform: translateX(-25%);
     -moz-transform: translateX(-25%);
     -ms-transform: translateX(-25%);
-    -o-transform: translateX(-25%);
     transform: translateX(-25%);
   }
 
@@ -1048,7 +945,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -1057,7 +953,6 @@ label {
     -webkit-transform: translateX(-25%);
     -moz-transform: translateX(-25%);
     -ms-transform: translateX(-25%);
-    -o-transform: translateX(-25%);
     transform: translateX(-25%);
   }
 
@@ -1065,7 +960,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -1074,7 +968,6 @@ label {
     -webkit-transform: translateX(-25%);
     -moz-transform: translateX(-25%);
     -ms-transform: translateX(-25%);
-    -o-transform: translateX(-25%);
     transform: translateX(-25%);
   }
 
@@ -1082,7 +975,6 @@ label {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -1106,75 +998,72 @@ label {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-animation-duration: 450ms;
   -moz-animation-duration: 450ms;
   -ms-animation-duration: 450ms;
-  -o-animation-duration: 450ms;
   -webkit-animation-duration: 450ms;
   -moz-animation-duration: 450ms;
   -ms-animation-duration: 450ms;
-  -o-animation-duration: 450ms;
   animation-duration: 450ms;
   -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -moz-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -ms-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -moz-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   -ms-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 [data-system=modal].active > [data-organism].show {
   -webkit-animation-name: modal-show;
   -moz-animation-name: modal-show;
   -ms-animation-name: modal-show;
-  -o-animation-name: modal-show;
   -webkit-animation-name: modal-show;
   -moz-animation-name: modal-show;
   -ms-animation-name: modal-show;
-  -o-animation-name: modal-show;
   animation-name: modal-show;
   -webkit-animation-direction: normal;
   -moz-animation-direction: normal;
   -ms-animation-direction: normal;
-  -o-animation-direction: normal;
   -webkit-animation-direction: normal;
   -moz-animation-direction: normal;
   -ms-animation-direction: normal;
-  -o-animation-direction: normal;
   animation-direction: normal;
 }
 [data-system=modal].active > [data-organism].hide {
   -webkit-animation-name: modal-show;
   -moz-animation-name: modal-show;
   -ms-animation-name: modal-show;
-  -o-animation-name: modal-show;
   -webkit-animation-name: modal-show;
   -moz-animation-name: modal-show;
   -ms-animation-name: modal-show;
-  -o-animation-name: modal-show;
   animation-name: modal-show;
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   -ms-animation-direction: reverse;
-  -o-animation-direction: reverse;
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   -ms-animation-direction: reverse;
-  -o-animation-direction: reverse;
   animation-direction: reverse;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+}
+[data-system=modal].active > [data-organism=loading]::before {
+  -webkit-animation: modal-loading 630ms 0 infinite;
+  -moz-animation: modal-loading 630ms 0 infinite;
+  -ms-animation: modal-loading 630ms 0 infinite;
+  animation: modal-loading 630ms 0 infinite;
+}
+[data-system=modal].active > [data-organism=loading]::after {
+  -webkit-animation: modal-loading 630ms 315ms infinite;
+  -moz-animation: modal-loading 630ms 315ms infinite;
+  -ms-animation: modal-loading 630ms 315ms infinite;
+  animation: modal-loading 630ms 315ms infinite;
 }
 [data-system=modal] > :not([data-organism=loading]) {
   background: #f4f4f4;
@@ -1193,7 +1082,6 @@ label {
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
   border-radius: 1rem;
 }
 [data-system=modal] > [data-organism=loading]::before,
@@ -1202,22 +1090,7 @@ label {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
-}
-[data-system=modal] > [data-organism=loading].show::before {
-  -webkit-animation: modal-loading 630ms 0 steps(15) infinite;
-  -moz-animation: modal-loading 630ms 0 steps(15) infinite;
-  -ms-animation: modal-loading 630ms 0 steps(15) infinite;
-  -o-animation: modal-loading 630ms 0 steps(15) infinite;
-  animation: modal-loading 630ms 0 steps(15) infinite;
-}
-[data-system=modal] > [data-organism=loading].show::after {
-  -webkit-animation: modal-loading 630ms 315ms steps(15) infinite;
-  -moz-animation: modal-loading 630ms 315ms steps(15) infinite;
-  -ms-animation: modal-loading 630ms 315ms steps(15) infinite;
-  -o-animation: modal-loading 630ms 315ms steps(15) infinite;
-  animation: modal-loading 630ms 315ms steps(15) infinite;
 }
 @-moz-keyframes modal-show {
   0% {
@@ -1225,7 +1098,6 @@ label {
     -webkit-transform: translateY(500%);
     -moz-transform: translateY(500%);
     -ms-transform: translateY(500%);
-    -o-transform: translateY(500%);
     transform: translateY(500%);
   }
 
@@ -1234,7 +1106,6 @@ label {
     -webkit-transform: translateY(-7%);
     -moz-transform: translateY(-7%);
     -ms-transform: translateY(-7%);
-    -o-transform: translateY(-7%);
     transform: translateY(-7%);
   }
 
@@ -1242,7 +1113,6 @@ label {
     -webkit-transform: translateY(2%);
     -moz-transform: translateY(2%);
     -ms-transform: translateY(2%);
-    -o-transform: translateY(2%);
     transform: translateY(2%);
   }
 
@@ -1250,7 +1120,6 @@ label {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
-    -o-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -1260,7 +1129,6 @@ label {
     -webkit-transform: translateY(500%);
     -moz-transform: translateY(500%);
     -ms-transform: translateY(500%);
-    -o-transform: translateY(500%);
     transform: translateY(500%);
   }
 
@@ -1269,7 +1137,6 @@ label {
     -webkit-transform: translateY(-7%);
     -moz-transform: translateY(-7%);
     -ms-transform: translateY(-7%);
-    -o-transform: translateY(-7%);
     transform: translateY(-7%);
   }
 
@@ -1277,7 +1144,6 @@ label {
     -webkit-transform: translateY(2%);
     -moz-transform: translateY(2%);
     -ms-transform: translateY(2%);
-    -o-transform: translateY(2%);
     transform: translateY(2%);
   }
 
@@ -1285,7 +1151,6 @@ label {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
-    -o-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -1295,7 +1160,6 @@ label {
     -webkit-transform: translateY(500%);
     -moz-transform: translateY(500%);
     -ms-transform: translateY(500%);
-    -o-transform: translateY(500%);
     transform: translateY(500%);
   }
 
@@ -1304,7 +1168,6 @@ label {
     -webkit-transform: translateY(-7%);
     -moz-transform: translateY(-7%);
     -ms-transform: translateY(-7%);
-    -o-transform: translateY(-7%);
     transform: translateY(-7%);
   }
 
@@ -1312,7 +1175,6 @@ label {
     -webkit-transform: translateY(2%);
     -moz-transform: translateY(2%);
     -ms-transform: translateY(2%);
-    -o-transform: translateY(2%);
     transform: translateY(2%);
   }
 
@@ -1320,7 +1182,6 @@ label {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
-    -o-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -1330,7 +1191,6 @@ label {
     -webkit-transform: translateY(500%);
     -moz-transform: translateY(500%);
     -ms-transform: translateY(500%);
-    -o-transform: translateY(500%);
     transform: translateY(500%);
   }
 
@@ -1339,7 +1199,6 @@ label {
     -webkit-transform: translateY(-7%);
     -moz-transform: translateY(-7%);
     -ms-transform: translateY(-7%);
-    -o-transform: translateY(-7%);
     transform: translateY(-7%);
   }
 
@@ -1347,7 +1206,6 @@ label {
     -webkit-transform: translateY(2%);
     -moz-transform: translateY(2%);
     -ms-transform: translateY(2%);
-    -o-transform: translateY(2%);
     transform: translateY(2%);
   }
 
@@ -1355,7 +1213,6 @@ label {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
-    -o-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -1365,7 +1222,6 @@ label {
     -webkit-transform: translateY(500%);
     -moz-transform: translateY(500%);
     -ms-transform: translateY(500%);
-    -o-transform: translateY(500%);
     transform: translateY(500%);
   }
 
@@ -1374,7 +1230,6 @@ label {
     -webkit-transform: translateY(-7%);
     -moz-transform: translateY(-7%);
     -ms-transform: translateY(-7%);
-    -o-transform: translateY(-7%);
     transform: translateY(-7%);
   }
 
@@ -1382,7 +1237,6 @@ label {
     -webkit-transform: translateY(2%);
     -moz-transform: translateY(2%);
     -ms-transform: translateY(2%);
-    -o-transform: translateY(2%);
     transform: translateY(2%);
   }
 
@@ -1390,7 +1244,6 @@ label {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
-    -o-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -1400,7 +1253,6 @@ label {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1);
   }
 
@@ -1409,7 +1261,6 @@ label {
     -webkit-transform: scale(0.85);
     -moz-transform: scale(0.85);
     -ms-transform: scale(0.85);
-    -o-transform: scale(0.85);
     transform: scale(0.85);
   }
 
@@ -1418,7 +1269,6 @@ label {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1);
   }
 }
@@ -1428,7 +1278,6 @@ label {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1);
   }
 
@@ -1437,7 +1286,6 @@ label {
     -webkit-transform: scale(0.85);
     -moz-transform: scale(0.85);
     -ms-transform: scale(0.85);
-    -o-transform: scale(0.85);
     transform: scale(0.85);
   }
 
@@ -1446,7 +1294,6 @@ label {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1);
   }
 }
@@ -1456,7 +1303,6 @@ label {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1);
   }
 
@@ -1465,7 +1311,6 @@ label {
     -webkit-transform: scale(0.85);
     -moz-transform: scale(0.85);
     -ms-transform: scale(0.85);
-    -o-transform: scale(0.85);
     transform: scale(0.85);
   }
 
@@ -1474,7 +1319,6 @@ label {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1);
   }
 }
@@ -1484,7 +1328,6 @@ label {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1);
   }
 
@@ -1493,7 +1336,6 @@ label {
     -webkit-transform: scale(0.85);
     -moz-transform: scale(0.85);
     -ms-transform: scale(0.85);
-    -o-transform: scale(0.85);
     transform: scale(0.85);
   }
 
@@ -1502,7 +1344,6 @@ label {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1);
   }
 }
@@ -1512,7 +1353,6 @@ label {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1);
   }
 
@@ -1521,7 +1361,6 @@ label {
     -webkit-transform: scale(0.85);
     -moz-transform: scale(0.85);
     -ms-transform: scale(0.85);
-    -o-transform: scale(0.85);
     transform: scale(0.85);
   }
 
@@ -1530,7 +1369,6 @@ label {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1);
   }
 }
@@ -1539,6 +1377,6 @@ label {
 html {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 100;
-  font-size: 15px;
+  font-size: 16px;
   background: #000;
 }

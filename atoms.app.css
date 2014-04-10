@@ -27,7 +27,7 @@ button > .icon + abbr{margin-left:.25em}
 [data-atoms="app"] section button[disabled]{cursor:default}
 [data-atoms="app"] section button + button{margin-right:.2em}
 
-[data-atoms="app"] input,[data-atoms="app"] select{-webkit-appearance:none;-webkit-user-select:text;-webkit-tap-highlight-color:rgba(255,255,255,0);outline:none}
+[data-atoms="app"] input,[data-atoms="app"] select,[data-atoms="app"] textarea{-webkit-appearance:none;-webkit-user-select:text;-webkit-tap-highlight-color:rgba(255,255,255,0);outline:none}
 [data-atoms="app"] input[type="text"],[data-atoms="app"] input[type="password"],[data-atoms="app"] input[type="date"],[data-atoms="app"] input[type="datetime"],[data-atoms="app"] input[type="email"],[data-atoms="app"] input[type="number"],[data-atoms="app"] input[type="search"],[data-atoms="app"] input[type="tel"],[data-atoms="app"] input[type="time"],[data-atoms="app"] input[type="url"],[data-atoms="app"] select,[data-atoms="app"] textarea,[data-atoms="app"] label.select{display:inline-block;width:100%;margin:.2rem 0;padding:.65rem .75rem;font-family:inherit;font-size:1rem;border:none;-moz-box-sizing:border-box;box-sizing:border-box;}
 [data-atoms="app"] input[type="text"]:focus,[data-atoms="app"] input[type="password"]:focus,[data-atoms="app"] input[type="date"]:focus,[data-atoms="app"] input[type="datetime"]:focus,[data-atoms="app"] input[type="email"]:focus,[data-atoms="app"] input[type="number"]:focus,[data-atoms="app"] input[type="search"]:focus,[data-atoms="app"] input[type="tel"]:focus,[data-atoms="app"] input[type="time"]:focus,[data-atoms="app"] input[type="url"]:focus,[data-atoms="app"] select:focus,[data-atoms="app"] textarea:focus,[data-atoms="app"] label.select:focus{outline:none !important}
 [data-atoms="app"] input[type="text"].big,[data-atoms="app"] input[type="password"].big,[data-atoms="app"] input[type="date"].big,[data-atoms="app"] input[type="datetime"].big,[data-atoms="app"] input[type="email"].big,[data-atoms="app"] input[type="number"].big,[data-atoms="app"] input[type="search"].big,[data-atoms="app"] input[type="tel"].big,[data-atoms="app"] input[type="time"].big,[data-atoms="app"] input[type="url"].big,[data-atoms="app"] select.big,[data-atoms="app"] textarea.big,[data-atoms="app"] label.select.big{padding:.85rem .75rem;font-size:1.2rem}
@@ -65,7 +65,7 @@ button > .icon + abbr{margin-left:.25em}
 [data-atoms="app"] [data-molecule="div"]{position:relative;width:100%;min-height:2.5rem;}
 [data-atoms="app"] [data-molecule="div"].padding{padding:.75rem 1rem}
 
-[data-atoms="app"] [data-molecule="form"]{position:relative;width:100%;min-height:2.5rem}
+[data-atoms="app"] [data-molecule="form"]{position:relative;width:100%;min-height:2.5rem;padding-top:2rem}
 
 [data-atoms="app"] [data-molecule=list]{min-height:2.5rem}
 
@@ -91,7 +91,7 @@ button > .icon + abbr{margin-left:.25em}
 [data-atoms="app"] [data-molecule="navigation"] > [data-molecule="search"] > *{height:2.026923076923077rem}
 [data-atoms="app"] [data-molecule="navigation"] > [data-molecule="search"] > button{z-index:2;top:.4rem;right:.4rem;width:2.25rem}
 
-[data-atoms="app"] > article{position:relative;width:100%;display:-webkit-box;display:-moz-box;display:-o-box;display:box;display:-ms-flexbox;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-o-backface-visibility:hidden;backface-visibility:hidden;-webkit-animation-fill-mode:forwards;-moz-animation-fill-mode:forwards;-ms-animation-fill-mode:forwards;-o-animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;-moz-animation-fill-mode:forwards;-ms-animation-fill-mode:forwards;-o-animation-fill-mode:forwards;animation-fill-mode:forwards;}
+[data-atoms="app"] > article{position:relative;width:100%;display:-webkit-box;display:-moz-box;display:-o-box;display:box;display:-ms-flexbox;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-o-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden;-webkit-animation-fill-mode:forwards;-moz-animation-fill-mode:forwards;-ms-animation-fill-mode:forwards;-o-animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards;-moz-animation-fill-mode:forwards;-ms-animation-fill-mode:forwards;-o-animation-fill-mode:forwards;animation-fill-mode:forwards;}
 [data-atoms="app"] > article:not(.active){visibility:hidden;}
 [data-atoms="app"] > article:not(.active) > section{display:none}
 [data-atoms="app"] > article.active{visibility:visible;}
