@@ -65,7 +65,7 @@ button > .icon + abbr{margin-left:.25em}
 [data-atoms="app"] [data-molecule="div"]{position:relative;width:100%;min-height:2.5rem;}
 [data-atoms="app"] [data-molecule="div"].padding{padding:.75rem 1rem}
 
-[data-atoms="app"] [data-molecule="form"]{position:relative;width:100%;min-height:2.5rem;padding-top:2rem}
+[data-atoms="app"] [data-molecule="form"]{position:relative;width:100%;min-height:2.5rem}
 
 [data-atoms="app"] [data-molecule=list]{min-height:2.5rem}
 
