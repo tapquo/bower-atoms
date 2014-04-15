@@ -70,6 +70,25 @@ button {
   opacity: 0.35;
 }
 
+[data-atoms=app] section > h1 {
+  font-size: 1.5rem;
+}
+[data-atoms=app] section > h2 {
+  font-size: 1.3rem;
+}
+[data-atoms=app] section > h3 {
+  font-size: 1.1rem;
+}
+[data-atoms=app] section > h4 {
+  font-size: 1rem;
+}
+[data-atoms=app] section > h5 {
+  font-size: 0.9rem;
+}
+[data-atoms=app] section > h6 {
+  font-size: 0.8rem;
+}
+
 [data-atoms="app"] input[type="text"],
 [data-atoms="app"] input[type="password"],
 [data-atoms="app"] input[type="date"],
@@ -980,11 +999,17 @@ label {
 }
 
 
-[data-atoms="app"] > article header h1,
-[data-atoms="app"] > aside header h1 {
+[data-atoms="app"] > article header [data-atom=heading],
+[data-atoms="app"] > aside header [data-atom=heading] {
   color: #fff;
   font-size: 1.15rem;
-  font-weight: 300 !important;
+  font-weight: 400;
+}
+[data-atoms=app].standalone > article header {
+  border-color: #6441a5;
+}
+[data-atoms=app].standalone > aside header {
+  border-color: #2a2a2a;
 }
 
 [data-system=modal] {
