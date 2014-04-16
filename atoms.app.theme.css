@@ -9,6 +9,7 @@ button {
   background-color: #ebebeb;
   color: #999;
 }
+[data-atoms="app"] section button,
 [data-atoms="app"] section button > abbr {
   font-weight: 300;
 }
@@ -228,6 +229,22 @@ button {
 [data-atoms="app"] textarea.required:-ms-input-placeholder,
 [data-atoms="app"] label.select.required:-ms-input-placeholder {
   color: #f1948a;
+}
+[data-atoms="app"] input[type="text"][disabled],
+[data-atoms="app"] input[type="password"][disabled],
+[data-atoms="app"] input[type="date"][disabled],
+[data-atoms="app"] input[type="datetime"][disabled],
+[data-atoms="app"] input[type="email"][disabled],
+[data-atoms="app"] input[type="number"][disabled],
+[data-atoms="app"] input[type="search"][disabled],
+[data-atoms="app"] input[type="tel"][disabled],
+[data-atoms="app"] input[type="time"][disabled],
+[data-atoms="app"] input[type="url"][disabled],
+[data-atoms="app"] select[disabled],
+[data-atoms="app"] textarea[disabled],
+[data-atoms="app"] label.select[disabled] {
+  background-color: #e7e7e7 !important;
+  color: #636363;
 }
 [data-atoms="app"] input[type="text"]::-webkit-input-placeholder,
 [data-atoms="app"] input[type="password"]::-webkit-input-placeholder,
