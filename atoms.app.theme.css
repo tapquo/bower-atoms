@@ -88,28 +88,29 @@ button {
   font-weight: 400;
   color: #fff;
 }
-[data-atoms=app] section > [data-atom=heading] {
-  font-weight: 300;
-}
 [data-atoms=app] section > h1 {
-  font-size: 1.5rem;
-  font-weight: 700 !important;
+  font-size: 1.32rem;
+  font-weight: 700;
 }
 [data-atoms=app] section > h2 {
-  font-size: 1.3rem;
-  font-weight: 700 !important;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 [data-atoms=app] section > h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 700;
 }
 [data-atoms=app] section > h4 {
   font-size: 1rem;
+  font-weight: 300;
 }
 [data-atoms=app] section > h5 {
   font-size: 0.9rem;
+  font-weight: 300;
 }
 [data-atoms=app] section > h6 {
   font-size: 0.8rem;
+  font-weight: 300;
 }
 
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
@@ -1111,14 +1112,14 @@ label {
 }
 
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
-[data-system=modal] {
+[data-atoms="app"] [data-system=modal] {
   visibility: hidden;
 }
-[data-system=modal].active {
+[data-atoms="app"] [data-system=modal].active {
   visibility: visible;
   background-color: rgba(0,0,0,0.75);
 }
-[data-system=modal].active > [data-organism] {
+[data-atoms="app"] [data-system=modal].active > [data-organism] {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
@@ -1138,7 +1139,7 @@ label {
   -ms-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-[data-system=modal].active > [data-organism].show {
+[data-atoms="app"] [data-system=modal].active > [data-organism].show {
   -webkit-animation-name: modal-show;
   -moz-animation-name: modal-show;
   -ms-animation-name: modal-show;
@@ -1154,7 +1155,7 @@ label {
   -ms-animation-direction: normal;
   animation-direction: normal;
 }
-[data-system=modal].active > [data-organism].hide {
+[data-atoms="app"] [data-system=modal].active > [data-organism].hide {
   -webkit-animation-name: modal-show;
   -moz-animation-name: modal-show;
   -ms-animation-name: modal-show;
@@ -1177,47 +1178,47 @@ label {
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-[data-system=modal].active > [data-organism=loading]::before {
+[data-atoms="app"] [data-system=modal].active > [data-organism=loading]::before {
   -webkit-animation: modal-loading 630ms 0 infinite;
   -moz-animation: modal-loading 630ms 0 infinite;
   -ms-animation: modal-loading 630ms 0 infinite;
   animation: modal-loading 630ms 0 infinite;
 }
-[data-system=modal].active > [data-organism=loading]::after {
+[data-atoms="app"] [data-system=modal].active > [data-organism=loading]::after {
   -webkit-animation: modal-loading 630ms 315ms infinite;
   -moz-animation: modal-loading 630ms 315ms infinite;
   -ms-animation: modal-loading 630ms 315ms infinite;
   animation: modal-loading 630ms 315ms infinite;
 }
-[data-system=modal] > :not([data-organism=loading]).accept > header {
+[data-atoms="app"] [data-system=modal] > :not([data-organism=loading]).accept > header {
   background-color: #2ecc71;
 }
-[data-system=modal] > :not([data-organism=loading]).cancel > header {
+[data-atoms="app"] [data-system=modal] > :not([data-organism=loading]).cancel > header {
   background-color: #e74c3c;
 }
-[data-system=modal] > :not([data-organism=loading]).warning > header {
+[data-atoms="app"] [data-system=modal] > :not([data-organism=loading]).warning > header {
   background-color: #edba22;
 }
-[data-system=modal] > :not([data-organism=loading]):not(.accept):not(.cancel):not(.warning) > header {
+[data-atoms="app"] [data-system=modal] > :not([data-organism=loading]):not(.accept):not(.cancel):not(.warning) > header {
   background-color: #6441a5;
 }
-[data-system=modal] > :not([data-organism=loading]) > header {
+[data-atoms="app"] [data-system=modal] > :not([data-organism=loading]) > header {
   color: #fff;
 }
-[data-system=modal] > :not([data-organism=loading]) > section,
-[data-system=modal] > :not([data-organism=loading]) > footer {
+[data-atoms="app"] [data-system=modal] > :not([data-organism=loading]) > section,
+[data-atoms="app"] [data-system=modal] > :not([data-organism=loading]) > footer {
   background-color: #fff;
   color: COLOR;
 }
-[data-system=modal] > [data-organism=loading] {
+[data-atoms="app"] [data-system=modal] > [data-organism=loading] {
   background: #181818;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   border-radius: 1rem;
 }
-[data-system=modal] > [data-organism=loading]::before,
-[data-system=modal] > [data-organism=loading]::after {
+[data-atoms="app"] [data-system=modal] > [data-organism=loading]::before,
+[data-atoms="app"] [data-system=modal] > [data-organism=loading]::after {
   background-color: #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
