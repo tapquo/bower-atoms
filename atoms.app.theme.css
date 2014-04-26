@@ -569,7 +569,7 @@ label {
   background-color: #cecece;
 }
 [data-atoms="app"] [data-molecule="navigation"] > [data-molecule="search"] {
-  background-color: #5a3b95;
+  background-color: #6441a5;
 }
 [data-atoms="app"] [data-molecule="navigation"] > [data-molecule="search"] > * {
   -webkit-border-radius: 1rem;
@@ -1102,12 +1102,24 @@ label {
 }
 
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+[data-atoms=app] > article > footer {
+  -webkit-transition: margin-bottom 150ms;
+  -moz-transition: margin-bottom 150ms;
+  -ms-transition: margin-bottom 150ms;
+  transition: margin-bottom 150ms;
+}
 
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
-[data-atoms=app].standalone > article header {
+[data-atoms=app] > article > header {
+  -webkit-transition: margin-top 150ms;
+  -moz-transition: margin-top 150ms;
+  -ms-transition: margin-top 150ms;
+  transition: margin-top 150ms;
+}
+[data-atoms=app].standalone > article > header {
   border-color: #6441a5;
 }
-[data-atoms=app].standalone > aside header {
+[data-atoms=app].standalone > aside > header {
   border-color: #2a2a2a;
 }
 
