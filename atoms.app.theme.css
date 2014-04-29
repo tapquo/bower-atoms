@@ -569,7 +569,7 @@ label {
   background-color: #cecece;
 }
 [data-atoms="app"] [data-molecule="navigation"] > [data-molecule="search"] {
-  background-color: #6441a5;
+  background-color: #5a3b95;
 }
 [data-atoms="app"] [data-molecule="navigation"] > [data-molecule="search"] > * {
   -webkit-border-radius: 1rem;
