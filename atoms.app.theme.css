@@ -380,7 +380,8 @@ label {
 
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms="app"] [data-atom=li] > figure {
-  background-color: #dcdcdc;
+  background-color: #e8e8e8;
+  color: #fff;
 }
 [data-atoms="app"] [data-atom=li] strong {
   font-weight: 400;
@@ -580,10 +581,10 @@ label {
 
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms="app"] > article {
-  -webkit-transform-origin: 100% 100%;
-  -moz-transform-origin: 100% 100%;
-  -ms-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
@@ -611,6 +612,8 @@ label {
 }
 [data-atoms="app"] > article.active[data-state="in"] {
   z-index: 2;
+}
+[data-atoms="app"] > article.active[data-state="in"]:not(.cover) {
   -webkit-animation-name: article-in;
   -moz-animation-name: article-in;
   -ms-animation-name: article-in;
@@ -618,6 +621,15 @@ label {
   -moz-animation-name: article-in;
   -ms-animation-name: article-in;
   animation-name: article-in;
+}
+[data-atoms="app"] > article.active[data-state="in"].cover {
+  -webkit-animation-name: article-in-cover;
+  -moz-animation-name: article-in-cover;
+  -ms-animation-name: article-in-cover;
+  -webkit-animation-name: article-in-cover;
+  -moz-animation-name: article-in-cover;
+  -ms-animation-name: article-in-cover;
+  animation-name: article-in-cover;
 }
 [data-atoms="app"] > article.active[data-state="in"]:only-of-type {
   -webkit-animation-duration: 1ms;
@@ -630,13 +642,6 @@ label {
 }
 [data-atoms="app"] > article.active[data-state="out"] {
   z-index: 2;
-  -webkit-animation-name: article-in;
-  -moz-animation-name: article-in;
-  -ms-animation-name: article-in;
-  -webkit-animation-name: article-in;
-  -moz-animation-name: article-in;
-  -ms-animation-name: article-in;
-  animation-name: article-in;
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   -ms-animation-direction: reverse;
@@ -652,8 +657,28 @@ label {
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
+[data-atoms="app"] > article.active[data-state="out"]:not(.cover) {
+  -webkit-animation-name: article-in;
+  -moz-animation-name: article-in;
+  -ms-animation-name: article-in;
+  -webkit-animation-name: article-in;
+  -moz-animation-name: article-in;
+  -ms-animation-name: article-in;
+  animation-name: article-in;
+}
+[data-atoms="app"] > article.active[data-state="out"].cover {
+  -webkit-animation-name: article-in-cover;
+  -moz-animation-name: article-in-cover;
+  -ms-animation-name: article-in-cover;
+  -webkit-animation-name: article-in-cover;
+  -moz-animation-name: article-in-cover;
+  -ms-animation-name: article-in-cover;
+  animation-name: article-in-cover;
+}
 [data-atoms="app"] > article.active[data-state="back-in"] {
   z-index: 1;
+}
+[data-atoms="app"] > article.active[data-state="back-in"]:not(.cover) {
   -webkit-animation-name: article-out;
   -moz-animation-name: article-out;
   -ms-animation-name: article-out;
@@ -661,6 +686,15 @@ label {
   -moz-animation-name: article-out;
   -ms-animation-name: article-out;
   animation-name: article-out;
+}
+[data-atoms="app"] > article.active[data-state="back-in"].cover {
+  -webkit-animation-name: article-out-cover;
+  -moz-animation-name: article-out-cover;
+  -ms-animation-name: article-out-cover;
+  -webkit-animation-name: article-out-cover;
+  -moz-animation-name: article-out-cover;
+  -ms-animation-name: article-out-cover;
+  animation-name: article-out-cover;
 }
 [data-atoms="app"] > article.active[data-state="back-out"] {
   z-index: 1;
@@ -671,13 +705,6 @@ label {
   -moz-animation-delay: 1;
   -ms-animation-delay: 1;
   animation-delay: 1;
-  -webkit-animation-name: article-out;
-  -moz-animation-name: article-out;
-  -ms-animation-name: article-out;
-  -webkit-animation-name: article-out;
-  -moz-animation-name: article-out;
-  -ms-animation-name: article-out;
-  animation-name: article-out;
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   -ms-animation-direction: reverse;
@@ -692,6 +719,24 @@ label {
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+}
+[data-atoms="app"] > article.active[data-state="back-out"]:not(.cover) {
+  -webkit-animation-name: article-out;
+  -moz-animation-name: article-out;
+  -ms-animation-name: article-out;
+  -webkit-animation-name: article-out;
+  -moz-animation-name: article-out;
+  -ms-animation-name: article-out;
+  animation-name: article-out;
+}
+[data-atoms="app"] > article.active[data-state="back-out"].cover {
+  -webkit-animation-name: article-out-cover;
+  -moz-animation-name: article-out-cover;
+  -ms-animation-name: article-out-cover;
+  -webkit-animation-name: article-out-cover;
+  -moz-animation-name: article-out-cover;
+  -ms-animation-name: article-out-cover;
+  animation-name: article-out-cover;
 }
 [data-atoms="app"] > article.active[data-state="aside-show"] {
   -webkit-animation-name: article-aside;
@@ -890,6 +935,161 @@ label {
     -moz-transform: translateX(-20%);
     -ms-transform: translateX(-20%);
     transform: translateX(-20%);
+    opacity: 0.75;
+  }
+}
+@-moz-keyframes article-in-cover {
+  0% {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes article-in-cover {
+  0% {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-o-keyframes article-in-cover {
+  0% {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-ms-keyframes article-in-cover {
+  0% {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes article-in-cover {
+  0% {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-moz-keyframes article-out-cover {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-10%);
+    -moz-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
+    transform: translateY(-10%);
+    opacity: 0.75;
+  }
+}
+@-webkit-keyframes article-out-cover {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-10%);
+    -moz-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
+    transform: translateY(-10%);
+    opacity: 0.75;
+  }
+}
+@-o-keyframes article-out-cover {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-10%);
+    -moz-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
+    transform: translateY(-10%);
+    opacity: 0.75;
+  }
+}
+@-ms-keyframes article-out-cover {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-10%);
+    -moz-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
+    transform: translateY(-10%);
+    opacity: 0.75;
+  }
+}
+@keyframes article-out-cover {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-10%);
+    -moz-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
+    transform: translateY(-10%);
     opacity: 0.75;
   }
 }
