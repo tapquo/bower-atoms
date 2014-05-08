@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 button {
   cursor: pointer;
 }
@@ -81,7 +81,16 @@ button {
   }
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+[data-atoms=app] [data-atom=figure] {
+  background-color: #dcdcdc;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  background-size: cover;
+}
+
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 [data-atoms=app] article header > [data-atom=heading],
 [data-atoms=app] aside header > [data-atom=heading] {
   font-size: 1.1rem;
@@ -113,7 +122,12 @@ button {
   font-weight: 300;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+[data-atoms=app] [data-atom=image] {
+  background-color: #dcdcdc;
+}
+
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 [data-atoms="app"] input[type="text"],
 [data-atoms="app"] input[type="password"],
 [data-atoms="app"] input[type="date"],
@@ -361,7 +375,7 @@ button {
   }
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 label {
   font-weight: 300;
 }
@@ -378,7 +392,7 @@ label {
   color: rgba(0,0,0,0.6);
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 [data-atoms="app"] [data-atom=li] > figure {
   background-color: #e8e8e8;
   color: #fff;
@@ -409,7 +423,7 @@ label {
   color: #878787;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 [data-atoms="app"] header nav a {
   color: #e7e1f3;
 }
@@ -423,7 +437,7 @@ label {
   }
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 [data-atoms="app"] select:after {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -432,7 +446,7 @@ label {
   background-color: #cecece;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 [data-atoms="app"] input[type=checkbox] {
   border: none;
   -webkit-border-radius: 1rem;
@@ -465,15 +479,15 @@ label {
   border-color: SUCCESS;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 [data-atoms="app"] > article > [data-molecule="navigation"] {
   background-color: #232323;
 }
@@ -557,8 +571,8 @@ label {
   }
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
-[data-atoms="app"] section [data-molecule="search"] > button {
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+[data-atoms="app"] section [data-extend="search"] > button {
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   -ms-box-shadow: none !important;
@@ -569,17 +583,52 @@ label {
   border-radius: 0 0.15rem 0.15rem 0;
   background-color: #cecece;
 }
-[data-atoms="app"] [data-molecule="navigation"] > [data-molecule="search"] {
+[data-atoms="app"] [data-molecule="navigation"] > [data-extend="search"] {
   background-color: #5a3b95;
 }
-[data-atoms="app"] [data-molecule="navigation"] > [data-molecule="search"] > * {
+[data-atoms="app"] [data-molecule="navigation"] > [data-extend="search"] > * {
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   border-radius: 1rem;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+[data-atoms=app] [data-molecule=div][data-extend=tags] > [data-atom=label] {
+  font-weight: 700;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  border-radius: 0.8rem;
+  background-color: #c3c3c3;
+  color: #fff;
+}
+[data-atoms=app] [data-molecule=div][data-extend=tags] > [data-atom=label].accept {
+  background-color: #2ecc71;
+}
+[data-atoms=app] [data-molecule=div][data-extend=tags] > [data-atom=label].cancel {
+  background-color: #e74c3c;
+}
+[data-atoms=app] [data-molecule=div][data-extend=tags] > [data-atom=label].warning {
+  background-color: #edba22;
+}
+[data-atoms=app] [data-molecule=div][data-extend=tags] > [data-atom=label]:active {
+  -webkit-box-shadow: inset 0 0 0 2rem rgba(0,0,0,0.15);
+  -moz-box-shadow: inset 0 0 0 2rem rgba(0,0,0,0.15);
+  -ms-box-shadow: inset 0 0 0 2rem rgba(0,0,0,0.15);
+  box-shadow: inset 0 0 0 2rem rgba(0,0,0,0.15);
+}
+@media screen and (min-width: 1024px) {
+  [data-atoms=app] [data-molecule=div][data-extend=tags] > [data-atom=label]:hover {
+    -webkit-box-shadow: inset 0 0 0 2rem rgba(0,0,0,0.15);
+    -moz-box-shadow: inset 0 0 0 2rem rgba(0,0,0,0.15);
+    -ms-box-shadow: inset 0 0 0 2rem rgba(0,0,0,0.15);
+    box-shadow: inset 0 0 0 2rem rgba(0,0,0,0.15);
+    cursor: pointer;
+  }
+}
+
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 [data-atoms="app"] > article {
   -webkit-transform-origin: 50% 100%;
   -moz-transform-origin: 50% 100%;
@@ -607,8 +656,11 @@ label {
   -ms-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-[data-atoms="app"] > article.active.aside {
+[data-atoms="app"] > article.active.aside:not(.right) {
   left: 256px;
+}
+[data-atoms="app"] > article.active.aside.right {
+  right: 256px;
 }
 [data-atoms="app"] > article.active[data-state="in"] {
   z-index: 2;
@@ -667,6 +719,13 @@ label {
   animation-name: article-in;
 }
 [data-atoms="app"] > article.active[data-state="out"].cover {
+  -webkit-animation-delay: 450ms;
+  -moz-animation-delay: 450ms;
+  -ms-animation-delay: 450ms;
+  -webkit-animation-delay: 450ms;
+  -moz-animation-delay: 450ms;
+  -ms-animation-delay: 450ms;
+  animation-delay: 450ms;
   -webkit-animation-name: article-in-cover;
   -moz-animation-name: article-in-cover;
   -ms-animation-name: article-in-cover;
@@ -739,13 +798,6 @@ label {
   animation-name: article-out-cover;
 }
 [data-atoms="app"] > article.active[data-state="aside-show"] {
-  -webkit-animation-name: article-aside;
-  -moz-animation-name: article-aside;
-  -ms-animation-name: article-aside;
-  -webkit-animation-name: article-aside;
-  -moz-animation-name: article-aside;
-  -ms-animation-name: article-aside;
-  animation-name: article-aside;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
@@ -753,8 +805,6 @@ label {
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-}
-[data-atoms="app"] > article.active[data-state="aside-hide"] {
   -webkit-animation-name: article-aside;
   -moz-animation-name: article-aside;
   -ms-animation-name: article-aside;
@@ -762,6 +812,8 @@ label {
   -moz-animation-name: article-aside;
   -ms-animation-name: article-aside;
   animation-name: article-aside;
+}
+[data-atoms="app"] > article.active[data-state="aside-hide"] {
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   -ms-animation-direction: reverse;
@@ -776,6 +828,52 @@ label {
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  -webkit-animation-name: article-aside;
+  -moz-animation-name: article-aside;
+  -ms-animation-name: article-aside;
+  -webkit-animation-name: article-aside;
+  -moz-animation-name: article-aside;
+  -ms-animation-name: article-aside;
+  animation-name: article-aside;
+}
+[data-atoms="app"] > article.active[data-state="aside-show-right"] {
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: article-aside-right;
+  -moz-animation-name: article-aside-right;
+  -ms-animation-name: article-aside-right;
+  -webkit-animation-name: article-aside-right;
+  -moz-animation-name: article-aside-right;
+  -ms-animation-name: article-aside-right;
+  animation-name: article-aside-right;
+}
+[data-atoms="app"] > article.active[data-state="aside-hide-right"] {
+  -webkit-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  -ms-animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  -ms-animation-direction: reverse;
+  animation-direction: reverse;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: article-aside-right;
+  -moz-animation-name: article-aside-right;
+  -ms-animation-name: article-aside-right;
+  -webkit-animation-name: article-aside-right;
+  -moz-animation-name: article-aside-right;
+  -ms-animation-name: article-aside-right;
+  animation-name: article-aside-right;
 }
 [data-atoms="app"] > article header {
   background-color: #6441a5;
@@ -1168,8 +1266,83 @@ label {
     transform: translateX(256px);
   }
 }
+@-moz-keyframes article-aside-right {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+  100% {
+    -webkit-transform: translateX(-256px);
+    -moz-transform: translateX(-256px);
+    -ms-transform: translateX(-256px);
+    transform: translateX(-256px);
+  }
+}
+@-webkit-keyframes article-aside-right {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-256px);
+    -moz-transform: translateX(-256px);
+    -ms-transform: translateX(-256px);
+    transform: translateX(-256px);
+  }
+}
+@-o-keyframes article-aside-right {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-256px);
+    -moz-transform: translateX(-256px);
+    -ms-transform: translateX(-256px);
+    transform: translateX(-256px);
+  }
+}
+@-ms-keyframes article-aside-right {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-256px);
+    -moz-transform: translateX(-256px);
+    -ms-transform: translateX(-256px);
+    transform: translateX(-256px);
+  }
+}
+@keyframes article-aside-right {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(-256px);
+    -moz-transform: translateX(-256px);
+    -ms-transform: translateX(-256px);
+    transform: translateX(-256px);
+  }
+}
+
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 [data-atoms="app"] > aside {
   background: #2f2f2f;
   width: 256px;
@@ -1190,6 +1363,8 @@ label {
 }
 [data-atoms="app"] > aside.active[data-state="in"] {
   z-index: 0;
+}
+[data-atoms="app"] > aside.active[data-state="in"]:not(.right) {
   -webkit-animation-name: aside-in;
   -moz-animation-name: aside-in;
   -ms-animation-name: aside-in;
@@ -1198,15 +1373,17 @@ label {
   -ms-animation-name: aside-in;
   animation-name: aside-in;
 }
+[data-atoms="app"] > aside.active[data-state="in"].right {
+  -webkit-animation-name: aside-in-right;
+  -moz-animation-name: aside-in-right;
+  -ms-animation-name: aside-in-right;
+  -webkit-animation-name: aside-in-right;
+  -moz-animation-name: aside-in-right;
+  -ms-animation-name: aside-in-right;
+  animation-name: aside-in-right;
+}
 [data-atoms="app"] > aside.active[data-state="out"] {
   z-index: -1;
-  -webkit-animation-name: aside-in;
-  -moz-animation-name: aside-in;
-  -ms-animation-name: aside-in;
-  -webkit-animation-name: aside-in;
-  -moz-animation-name: aside-in;
-  -ms-animation-name: aside-in;
-  animation-name: aside-in;
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   -ms-animation-direction: reverse;
@@ -1221,6 +1398,24 @@ label {
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+}
+[data-atoms="app"] > aside.active[data-state="out"]:not(.right) {
+  -webkit-animation-name: aside-in;
+  -moz-animation-name: aside-in;
+  -ms-animation-name: aside-in;
+  -webkit-animation-name: aside-in;
+  -moz-animation-name: aside-in;
+  -ms-animation-name: aside-in;
+  animation-name: aside-in;
+}
+[data-atoms="app"] > aside.active[data-state="out"].right {
+  -webkit-animation-name: aside-in-right;
+  -moz-animation-name: aside-in-right;
+  -ms-animation-name: aside-in-right;
+  -webkit-animation-name: aside-in-right;
+  -moz-animation-name: aside-in-right;
+  -ms-animation-name: aside-in-right;
+  animation-name: aside-in-right;
 }
 [data-atoms="app"] > aside header {
   background-color: #2a2a2a;
@@ -1300,8 +1495,83 @@ label {
     transform: translateX(0);
   }
 }
+@-moz-keyframes aside-in-right {
+  0% {
+    -webkit-transform: translateX(25%);
+    -moz-transform: translateX(25%);
+    -ms-transform: translateX(25%);
+    transform: translateX(25%);
+  }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes aside-in-right {
+  0% {
+    -webkit-transform: translateX(25%);
+    -moz-transform: translateX(25%);
+    -ms-transform: translateX(25%);
+    transform: translateX(25%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-o-keyframes aside-in-right {
+  0% {
+    -webkit-transform: translateX(25%);
+    -moz-transform: translateX(25%);
+    -ms-transform: translateX(25%);
+    transform: translateX(25%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-ms-keyframes aside-in-right {
+  0% {
+    -webkit-transform: translateX(25%);
+    -moz-transform: translateX(25%);
+    -ms-transform: translateX(25%);
+    transform: translateX(25%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes aside-in-right {
+  0% {
+    -webkit-transform: translateX(25%);
+    -moz-transform: translateX(25%);
+    -ms-transform: translateX(25%);
+    transform: translateX(25%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 [data-atoms=app] > article > footer {
   -webkit-transition: margin-bottom 150ms;
   -moz-transition: margin-bottom 150ms;
@@ -1309,7 +1579,7 @@ label {
   transition: margin-bottom 150ms;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 [data-atoms=app] > article > header {
   -webkit-transition: margin-top 150ms;
   -moz-transition: margin-top 150ms;
@@ -1323,7 +1593,7 @@ label {
   border-color: #2a2a2a;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 [data-system=modal] {
   visibility: hidden;
 }
@@ -1390,47 +1660,47 @@ label {
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-[data-system=modal].active > [data-organism=loading]::before {
+[data-system=modal].active > [data-extend=loading]::before {
   -webkit-animation: modal-loading 630ms 0 infinite;
   -moz-animation: modal-loading 630ms 0 infinite;
   -ms-animation: modal-loading 630ms 0 infinite;
   animation: modal-loading 630ms 0 infinite;
 }
-[data-system=modal].active > [data-organism=loading]::after {
+[data-system=modal].active > [data-extend=loading]::after {
   -webkit-animation: modal-loading 630ms 315ms infinite;
   -moz-animation: modal-loading 630ms 315ms infinite;
   -ms-animation: modal-loading 630ms 315ms infinite;
   animation: modal-loading 630ms 315ms infinite;
 }
-[data-system=modal] > :not([data-organism=loading]).accept > header {
+[data-system=modal] > :not([data-extend=loading]).accept > header {
   background-color: #2ecc71;
 }
-[data-system=modal] > :not([data-organism=loading]).cancel > header {
+[data-system=modal] > :not([data-extend=loading]).cancel > header {
   background-color: #e74c3c;
 }
-[data-system=modal] > :not([data-organism=loading]).warning > header {
+[data-system=modal] > :not([data-extend=loading]).warning > header {
   background-color: #edba22;
 }
-[data-system=modal] > :not([data-organism=loading]):not(.accept):not(.cancel):not(.warning) > header {
+[data-system=modal] > :not([data-extend=loading]):not(.accept):not(.cancel):not(.warning) > header {
   background-color: #6441a5;
 }
-[data-system=modal] > :not([data-organism=loading]) > header {
+[data-system=modal] > :not([data-extend=loading]) > header {
   color: #fff;
 }
-[data-system=modal] > :not([data-organism=loading]) > section,
-[data-system=modal] > :not([data-organism=loading]) > footer {
+[data-system=modal] > :not([data-extend=loading]) > section,
+[data-system=modal] > :not([data-extend=loading]) > footer {
   background-color: #fff;
   color: COLOR;
 }
-[data-system=modal] > [data-organism=loading] {
+[data-system=modal] > [data-extend=loading] {
   background: #181818;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   border-radius: 1rem;
 }
-[data-system=modal] > [data-organism=loading]::before,
-[data-system=modal] > [data-organism=loading]::after {
+[data-system=modal] > [data-extend=loading]::before,
+[data-system=modal] > [data-extend=loading]::after {
   background-color: #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1718,15 +1988,15 @@ label {
   }
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 [data-atoms="app"] article > section {
   background-color: #f4f4f4;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
 [data-atoms="app"],
 html {
-  font-family: "Open Sans", "sans-serif";
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
   font-size: 16px;
   background: #000;
