@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 button {
   cursor: pointer;
 }
@@ -81,7 +81,7 @@ button {
   }
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms=app] [data-atom=figure] {
   background-color: #dcdcdc;
   -webkit-background-size: cover;
@@ -90,7 +90,7 @@ button {
   background-size: cover;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms=app] article header > [data-atom=heading],
 [data-atoms=app] aside header > [data-atom=heading] {
   font-size: 1.1rem;
@@ -122,12 +122,12 @@ button {
   font-weight: 300;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms=app] [data-atom=image] {
   background-color: #dcdcdc;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms="app"] input[type="text"],
 [data-atoms="app"] input[type="password"],
 [data-atoms="app"] input[type="date"],
@@ -375,7 +375,7 @@ button {
   }
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 label {
   font-weight: 300;
 }
@@ -392,7 +392,7 @@ label {
   color: rgba(0,0,0,0.6);
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms="app"] [data-atom=li] > figure {
   background-color: #e8e8e8;
   color: #fff;
@@ -423,7 +423,7 @@ label {
   color: #878787;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms="app"] header nav a {
   color: #e7e1f3;
 }
@@ -437,7 +437,7 @@ label {
   }
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms="app"] select:after {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -446,7 +446,7 @@ label {
   background-color: #cecece;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms="app"] input[type=checkbox] {
   border: none;
   -webkit-border-radius: 1rem;
@@ -479,15 +479,15 @@ label {
   border-color: SUCCESS;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms="app"] > article > [data-molecule="navigation"] {
   background-color: #232323;
 }
@@ -571,7 +571,7 @@ label {
   }
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms="app"] section [data-extend="search"] > button {
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
@@ -593,15 +593,19 @@ label {
   border-radius: 1rem;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms=app] [data-molecule=div][data-extend=tags] > [data-atom=label] {
   font-weight: 700;
+  text-transform: lowercase;
   -webkit-border-radius: 0.8rem;
   -moz-border-radius: 0.8rem;
   -ms-border-radius: 0.8rem;
   border-radius: 0.8rem;
   background-color: #c3c3c3;
   color: #fff;
+}
+[data-atoms=app] [data-molecule=div][data-extend=tags] > [data-atom=label].theme {
+  background-color: #6441a5;
 }
 [data-atoms=app] [data-molecule=div][data-extend=tags] > [data-atom=label].accept {
   background-color: #2ecc71;
@@ -628,7 +632,7 @@ label {
   }
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms="app"] > article {
   -webkit-transform-origin: 50% 100%;
   -moz-transform-origin: 50% 100%;
@@ -1342,7 +1346,7 @@ label {
   }
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms="app"] > aside {
   background: #2f2f2f;
   width: 256px;
@@ -1571,7 +1575,7 @@ label {
   }
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms=app] > article > footer {
   -webkit-transition: margin-bottom 150ms;
   -moz-transition: margin-bottom 150ms;
@@ -1579,7 +1583,7 @@ label {
   transition: margin-bottom 150ms;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms=app] > article > header {
   -webkit-transition: margin-top 150ms;
   -moz-transition: margin-top 150ms;
@@ -1593,7 +1597,7 @@ label {
   border-color: #2a2a2a;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-system=modal] {
   visibility: hidden;
 }
@@ -1988,12 +1992,12 @@ label {
   }
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms="app"] article > section {
   background-color: #f4f4f4;
 }
 
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
 [data-atoms="app"],
 html {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
