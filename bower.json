@@ -1,7 +1,7 @@
 {
   "name": "atoms-app",
   "description": "Atomic Development Components for Modern WebApps.",
-  "version": "0.05.14",
+  "version": "0.05.20",
   "homepage": "https://github.com/tapquo/atoms-app",
   "authors": [
     "@soyjavi <javi@tapquo.com>"
